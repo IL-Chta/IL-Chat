@@ -1,0 +1,1 @@
+Arquivos atualizados do site il-chta.github.io. Entrada Google e cadastro retornam ao IL Chats. O botão BAIXAR APK OFICIAL aparece na tela de entrada em qualquer aparelho e aponta para /downloads/IL-Chats.apk, já existente no site. Não inclui instalador Windows, AAB ou APK novo. Publicação pendente.
