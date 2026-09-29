@@ -1,0 +1,20 @@
+IL CHATS — CORREÇÃO FOCADA SOMENTE NA CÂMERA
+
+Base: ZIP original atual enviado pelo usuário.
+
+Causa concreta encontrada:
+- O app estava montado dentro de React.StrictMode.
+- A rotina WebRTC abre a câmera dentro de useEffect.
+- O cleanup desse mesmo efeito executa getTracks().forEach(track => track.stop()).
+- StrictMode pode montar/limpar efeitos novamente, o que conflita com uma câmera cuja
+  track é encerrada no cleanup.
+
+Alterações:
+1. Removido StrictMode apenas do render raiz; o aplicativo continua React normal.
+2. A videochamada passa a pedir audio + video diretamente, sem fixar deviceId exato.
+3. Nova versão do bundle no index para evitar cache antigo.
+
+NÃO ALTERADO NESTE PACOTE:
+- logotipo;
+- IL Bate Papo;
+- IL Chats Mail.
