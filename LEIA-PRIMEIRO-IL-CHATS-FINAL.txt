@@ -1,0 +1,16 @@
+IL CHATS — PACOTE PARA TESTE FINAL
+Data: 29/09/2026
+
+Base: ZIP restaurado enviado pelo usuário (IL-Chat-main (3)(3).zip).
+
+CAMERA:
+- O bundle ativo é index-receber-video-20260906.js.
+- Ele usa navigator.mediaDevices.getUserMedia diretamente.
+- Não contém chamadas a window.ilbpGetUserMedia.
+- O código funcional do pacote restaurado foi preservado; não foi feita reescrita ampla.
+
+IMPORTANTE:
+- Publicar no IL Chats, não no IL Bate Papo nem no IL Chats Mail.
+- Não excluir o repositório antigo antes do teste físico final.
+- Testar câmera em pelo menos 3 chamadas consecutivas, encerrando cada chamada normalmente.
+- Depois testar voz, mensagens, login e logout.
