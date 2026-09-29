@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title> 🦁 ☁️IL Bate Papo — Conversas, família, amigos e novas amizades ⚡ 🌐</title>
+  <title>🦁 IL Chats — Conversas, família, amigos e novas amizades</title>
 
   <meta name="description" content="IL Bate Papo conecta pessoas com mensagens, conversas, família, amigos, novas amizades e chamadas de voz e vídeo.">
   <meta name="keywords" content="IL Bate Papo, aplicativo de conversa, bate papo, chat, amigos, família, novas amizades, mensagens, chamada de voz, chamada de vídeo">
@@ -63,7 +63,7 @@
   })();
   </script>
   <script src="/turn-config.js?v=conexao-rapida-20260907-1"></script>
-  <script type="module" crossorigin src="/index-receber-video-20260906.js?v=ilbp-v8"></script>
+  <script type="module" crossorigin src="./index-receber-video-20260906.js?v=ilchats-camera-final-20260929"></script>
   
   <link rel="stylesheet" crossorigin href="/index-CtQnR9aj.css?v=20260909-3">
   <link rel="stylesheet" href="/status-circular.css?v=5">
@@ -217,51 +217,13 @@
 </script>
 
 <style id="camera-share-style">.camera-share-button{width:38px;height:38px;flex:0 0 38px;border:0;background:transparent;color:var(--muted);display:grid;place-items:center;cursor:pointer;font-size:20px}.camera-share-button:hover{color:#1bdcff}@media(max-width:680px){.camera-share-button{width:34px;flex-basis:34px}}</style>
-<script id="camera-share-script">
-(function(){
- function addCameraButton(){
-  document.querySelectorAll(".composer").forEach(function(composer){
-   if(composer.querySelector(".camera-share-button"))return;
-   var fileInput=composer.querySelector("input[type=\"file\"].attachment-file");
-   var attach=fileInput&&fileInput.closest("label");
-   if(!fileInput||!attach)return;
-   var button=document.createElement("button");button.type="button";button.className="camera-share-button";button.setAttribute("aria-label","Abrir câmera para foto ou vídeo");button.title="Foto ou vídeo";button.textContent="📷";
-   button.addEventListener("click",function(){
-    fileInput.setAttribute("accept","image/*,video/*");fileInput.setAttribute("capture","environment");fileInput.click();
-    setTimeout(function(){fileInput.setAttribute("accept","image/*,video/*");fileInput.removeAttribute("capture");},1800);
-   });
-   attach.insertAdjacentElement("afterend",button);
-  });
- }
- new MutationObserver(addCameraButton).observe(document.documentElement,{childList:true,subtree:true});addCameraButton();
-})();
-</script>
+<!-- camera-share-script removido: evitava múltiplos listeners concorrentes na câmera -->
 
 <style id="camera-mode-fix-style">.camera-mode-menu{z-index:9999;position:fixed;left:50%;bottom:150px;transform:translateX(-50%);display:flex;gap:8px;padding:10px;background:#0b1320;border:1px solid #ffffff22;border-radius:16px;box-shadow:0 14px 40px #000b}.camera-mode-menu button{width:auto!important;height:44px!important;padding:0 14px!important;border-radius:12px!important;background:#162235!important;color:#fff!important;font-weight:700}.camera-mode-menu button:first-child{background:#16cde8!important;color:#031017!important}</style>
-<script id="camera-mode-fix-script">
-(function(){
- function install(){
-  document.querySelectorAll(".composer").forEach(function(composer){
-   var old=composer.querySelector(".camera-share-button");if(!old||old.dataset.modeFix)return;
-   var button=old.cloneNode(true);button.dataset.modeFix="1";old.replaceWith(button);
-   button.addEventListener("click",function(){
-    var previous=document.querySelector(".camera-mode-menu");if(previous)previous.remove();
-    var menu=document.createElement("div");menu.className="camera-mode-menu";
-    function openCamera(type){var input=composer.querySelector("input[type=\"file\"].attachment-file");if(!input)return;menu.remove();input.setAttribute("accept",type==="photo"?"image/*":"video/*");input.setAttribute("capture","environment");var restore=function(){setTimeout(function(){input.setAttribute("accept","image/*,video/*");input.removeAttribute("capture");},300);input.removeEventListener("change",restore)};input.addEventListener("change",restore);input.click()}
-    var photo=document.createElement("button");photo.type="button";photo.textContent="📷 Tirar foto";photo.onclick=function(){openCamera("photo")};
-    var video=document.createElement("button");video.type="button";video.textContent="🎥 Gravar vídeo";video.onclick=function(){openCamera("video")};
-    menu.append(photo,video);document.body.appendChild(menu);
-   });
-  });
- }
- new MutationObserver(install).observe(document.documentElement,{childList:true,subtree:true});install();
-})();
-</script>
+<!-- camera-mode-fix-script removido: evitava múltiplos listeners concorrentes na câmera -->
 
 <style id="native-camera-fix-style">.native-camera-menu{z-index:10001;position:fixed;left:50%;bottom:150px;transform:translateX(-50%);display:flex;gap:8px;padding:10px;background:#0b1320;border:1px solid #ffffff22;border-radius:16px;box-shadow:0 14px 40px #000b}.native-camera-choice{width:auto!important;height:44px!important;padding:0 14px!important;border-radius:12px!important;background:#162235!important;color:#fff!important;font-weight:700;display:flex!important;align-items:center!important;cursor:pointer}.native-camera-choice:first-child{background:#16cde8!important;color:#031017!important}.native-camera-choice input{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}</style>
-<script id="native-camera-and-document-fix">
-(function(){function install(){document.querySelectorAll(".composer").forEach(function(composer){var target=composer.querySelector("input.attachment-file");if(target&&!target.dataset.documentFix){target.dataset.documentFix="1";target.setAttribute("accept",".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.csv,.zip,application/pdf");target.removeAttribute("capture");var clip=target.closest("label");if(clip){clip.setAttribute("aria-label","Enviar documento");clip.title="Enviar documento"}}var current=composer.querySelector(".camera-share-button");if(!current||current.dataset.nativeCamera)return;var button=current.cloneNode(true);button.dataset.modeFix="1";button.dataset.nativeCamera="1";current.replaceWith(button);button.addEventListener("click",function(){var old=document.querySelector(".native-camera-menu");if(old){old.remove();return}document.querySelectorAll(".camera-mode-menu").forEach(function(x){x.remove()});var sendTarget=composer.querySelector("input.attachment-file");if(!sendTarget)return;var menu=document.createElement("div");menu.className="native-camera-menu";function choice(text,accept){var label=document.createElement("label");label.className="native-camera-choice";label.textContent=text;var input=document.createElement("input");input.type="file";input.accept=accept;input.setAttribute("capture","environment");input.addEventListener("change",function(){var file=input.files&&input.files[0];if(!file)return;try{var dt=new DataTransfer();dt.items.add(file);sendTarget.files=dt.files;sendTarget.dispatchEvent(new Event("change",{bubbles:true}))}catch(e){alert("Não foi possível enviar este arquivo. Tente novamente.")}menu.remove()});label.appendChild(input);return label}menu.append(choice("📷 Tirar foto","image/*"),choice("🎥 Gravar vídeo","video/*"));document.body.appendChild(menu)})})}new MutationObserver(install).observe(document.documentElement,{childList:true,subtree:true});install()})();
-</script>
+<!-- native-camera-and-document-fix removido: evitava múltiplos listeners concorrentes na câmera -->
 
 <style id="in-chat-camera-style">.chat-camera-overlay{position:fixed;z-index:20000;inset:0;background:#02050a;color:#fff;display:flex;flex-direction:column}.chat-camera-head{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:#070b12}.chat-camera-head button,.chat-camera-controls button{border:0;color:#fff;background:#ffffff18;border-radius:14px}.chat-camera-head button{width:42px;height:42px;font-size:20px}.chat-camera-stage{position:relative;flex:1;min-height:0;background:#000;display:grid;place-items:center;overflow:hidden}.chat-camera-stage video{width:100%;height:100%;object-fit:cover}.chat-camera-controls{display:flex;align-items:center;justify-content:center;gap:16px;padding:18px;background:#070b12}.chat-camera-controls button{min-width:64px;height:58px;padding:0 12px;font-weight:700}.chat-camera-controls .take-photo{width:70px;height:70px;border-radius:50%;background:#fff;color:#071017;font-size:25px}.chat-camera-controls .record-video{background:#ff3f68}.chat-camera-controls .record-video.recording{animation:cameraPulse 1s infinite}.chat-camera-status{position:absolute;top:16px;left:50%;transform:translateX(-50%);background:#000a;padding:8px 12px;border-radius:12px;font-size:12px}.chat-camera-preview{width:100%;height:100%;object-fit:contain;background:#000}.chat-camera-controls .preview-send{background:#1bdcff;color:#031017}.chat-camera-controls .preview-cancel{background:#ff3f68}@keyframes cameraPulse{50%{opacity:.55}}@media(min-width:700px){.chat-camera-overlay{inset:5%;border-radius:22px;overflow:hidden;box-shadow:0 20px 80px #000}}</style>
 <script id="in-chat-camera-script">
@@ -273,7 +235,7 @@
   document.querySelectorAll(".native-camera-menu,.camera-mode-menu,.chat-camera-overlay").forEach(function(x){x.remove()});
   var overlay=document.createElement("div");overlay.className="chat-camera-overlay";overlay.innerHTML="<div class=\"chat-camera-head\"><button type=\"button\" aria-label=\"Fechar câmera\">✕</button><strong>Câmera da conversa</strong><button type=\"button\" aria-label=\"Trocar câmera\">🔄</button></div><div class=\"chat-camera-stage\"><video autoplay muted playsinline></video><span class=\"chat-camera-status\">Preparando câmera…</span></div><div class=\"chat-camera-controls\"><button type=\"button\" class=\"take-photo\" title=\"Tirar foto\">📷</button><button type=\"button\" class=\"record-video\">● Gravar vídeo</button></div>";document.body.appendChild(overlay);
   var video=overlay.querySelector("video"),status=overlay.querySelector(".chat-camera-status"),close=overlay.querySelector("[aria-label=\"Fechar câmera\"]"),flip=overlay.querySelector("[aria-label=\"Trocar câmera\"]"),photo=overlay.querySelector(".take-photo"),record=overlay.querySelector(".record-video");
-  async function start(){stopAll();try{activeStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing}},audio:true});video.srcObject=activeStream;await video.play();status.textContent=facing==="environment"?"Câmera traseira":"Câmera frontal";setTimeout(function(){if(status)status.style.display="none"},1200)}catch(e){status.style.display="block";status.textContent="Permita o acesso à câmera e ao microfone.";photo.disabled=true;record.disabled=true}}
+  async function start(){stopAll();photo.disabled=false;record.disabled=false;status.style.display="block";try{try{activeStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing}},audio:true})}catch(firstError){activeStream=await navigator.mediaDevices.getUserMedia({video:true,audio:false})}video.srcObject=activeStream;video.muted=true;video.setAttribute("playsinline","");await video.play();status.textContent=activeStream.getAudioTracks().length?(facing==="environment"?"Câmera traseira":"Câmera frontal"):"Câmera ativa • microfone indisponível";setTimeout(function(){if(status)status.style.display="none"},1500)}catch(e){console.error("IL Chats câmera:",e);status.style.display="block";status.textContent="Não foi possível abrir a câmera. Verifique a permissão do navegador.";photo.disabled=true;record.disabled=true}}
   function finish(){stopAll();overlay.remove()} function showPreview(file,type){stopAll();var url=URL.createObjectURL(file);var stage=overlay.querySelector(".chat-camera-stage"),controls=overlay.querySelector(".chat-camera-controls");stage.innerHTML=type==="photo"?"<img class=\"chat-camera-preview\" src=\""+url+"\" alt=\"Prévia da foto\">":"<video class=\"chat-camera-preview\" src=\""+url+"\" controls playsinline></video>";controls.innerHTML="<button type=\"button\" class=\"preview-repeat\">↻ Refazer</button><button type=\"button\" class=\"preview-send\">Enviar</button><button type=\"button\" class=\"preview-cancel\">Cancelar</button>";controls.querySelector(".preview-send").onclick=function(){if(deliver(composer,file)){URL.revokeObjectURL(url);overlay.remove()}};controls.querySelector(".preview-repeat").onclick=function(){URL.revokeObjectURL(url);overlay.remove();openCamera(composer)};controls.querySelector(".preview-cancel").onclick=function(){URL.revokeObjectURL(url);overlay.remove()}}
   close.onclick=finish;flip.onclick=async function(){if(recorder&&recorder.state==="recording")return;facing=facing==="environment"?"user":"environment";status.style.display="block";status.textContent="Trocando câmera…";await start()};
   photo.onclick=function(){if(!video.videoWidth)return;var canvas=document.createElement("canvas");canvas.width=video.videoWidth;canvas.height=video.videoHeight;canvas.getContext("2d").drawImage(video,0,0);canvas.toBlob(function(blob){if(!blob)return;var file=new File([blob],"foto-"+Date.now()+".jpg",{type:"image/jpeg"});showPreview(file,"photo")},"image/jpeg",.9)};

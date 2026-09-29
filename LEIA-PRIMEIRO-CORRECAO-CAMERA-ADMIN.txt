@@ -1,0 +1,28 @@
+IL CHATS — CORREÇÃO CÂMERA + PRESERVAÇÃO DO ADMIN
+Data: 29/09/2026
+
+Base: IL-Chat-main (3)(3).zip enviado/restaurado pelo usuário.
+
+CAUSA CONCRETA ENCONTRADA:
+1. A página /IL-Chat/ carregava o bundle principal com caminho absoluto /index-receber-video-20260906.js.
+   Isso fazia /IL-Chat/ executar o JavaScript da publicação da RAIZ, misturando as duas versões.
+2. Havia três implementações antigas concorrendo pelo mesmo botão de câmera da conversa.
+3. A câmera da conversa exigia câmera + microfone juntos; se o microfone falhasse, a câmera também era perdida.
+4. O bundle restaurado ainda continha React.StrictMode no render raiz.
+
+ALTERAÇÕES:
+- Bundle principal de /IL-Chat/ passa a ser carregado localmente: ./index-receber-video-20260906.js.
+- Removidos listeners antigos concorrentes da câmera; mantida a câmera interna direta.
+- Câmera tenta áudio+vídeo e faz fallback para vídeo sem áudio.
+- Removido StrictMode do render raiz.
+- Área do administrador e scripts administrativos do HTML foram preservados.
+- Não foi alterado IL Chats Mail.
+- Não excluir repositórios antes do teste físico.
+
+TESTE:
+1. Entrar na conta administradora.
+2. Abrir Perfil > Área do administrador.
+3. Abrir conversa > câmera > foto.
+4. Abrir conversa > câmera > gravar vídeo.
+5. Fazer chamada de vídeo.
+6. Encerrar e repetir a chamada 3 vezes.
