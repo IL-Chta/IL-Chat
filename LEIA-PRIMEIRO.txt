@@ -1,4 +1,4 @@
-IL TALK CURSOS DE IDIOMAS — V6V
+IL TALK CURSOS DE IDIOMAS — V7
 
 V5 mantém o leão neon da V4 por enquanto. Ele pode servir bem à futura área infantil; depois podemos criar uma identidade mais sóbria para adolescentes/adultos sem perder a marca.
 
@@ -23,12 +23,10 @@ AINDA PRECISA DE BACKEND PARA SER REAL:
 SEGURANÇA:
 Este ZIP é independente e não altera IL Chats nem IL Bate Papo. Não substitua a raiz desses projetos com este pacote.
 
-
-NOVO V6V
-- Refeito diretamente sobre a V5 (não sobre a V6 anterior).
-- Logotipo de login com visual dourado, dois halos neon e esfera luminosa orbital.
-- A esfera passa visualmente sobre a região IL TALK para criar profundidade.
-- Botão 🚪 Sair adicionado sem alterar a grade principal da V5.
-- Sair retorna ao login, interrompe a voz e limpa a senha.
-- Histórico/progresso local permanece preservado.
-- IL Chats e IL Bate Papo não fazem parte deste ZIP e não foram alterados.
+NOVO NA V7
+- Feita novamente sobre a V5 estável.
+- Usa o leão da referência visual aprovada pelo usuário no login e no cabeçalho interno.
+- Login agora traz IL TALK / CURSOS DE IDIOMAS e materiais de estudo: japonês e inglês, lápis/borracha.
+- Neon e ponto luminoso orbitam a marca.
+- Botão Sair volta ao login sem apagar o histórico local.
+- IL Chats e IL Bate Papo não são modificados por este pacote.
