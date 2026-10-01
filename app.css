@@ -227,3 +227,130 @@
 
 /* Dentro do curso: marca limpa. */
 .v15Lion::before,.v15Lion::after{display:none!important}
+
+/* ==========================================================
+   V19 — MOTOR VISUAL EXTRAÍDO DO IL BATE PAPO
+   Mesmas proporções, tempos e trajetórias do efeito original.
+   ========================================================== */
+
+/* desliga os experimentos das V15–V18 */
+.v15Hero::before,.v15Hero::after{content:none!important;display:none!important}
+.frameSvg,.wormPath,.worm,.frameWorm{display:none!important}
+.lionSvg,.v15LionSvg,.insideOrbit,.lionOrbit,.lionOrbits,.orbit,.orbits{display:none!important}
+
+/* palco */
+.ilbp-mail-stage{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:visible!important;
+  border-radius:28px!important;
+  filter:drop-shadow(0 0 24px #008cff55)!important;
+  background:transparent!important;
+}
+.ilbp-mail-stage>img{position:relative!important;z-index:1!important}
+
+/* moldura invisível: só o pequeno LED de 3 cores aparece e percorre o perímetro */
+.ilbp-frame-svg{
+  display:block!important;
+  position:absolute!important;
+  inset:-4px!important;
+  width:calc(100% + 8px)!important;
+  height:calc(100% + 8px)!important;
+  z-index:6!important;
+  pointer-events:none!important;
+  overflow:visible!important;
+}
+.ilbp-frame-track{fill:none!important;stroke:transparent!important;stroke-width:2!important}
+.ilbp-frame-led{
+  fill:none!important;
+  stroke:url(#ilbpFrameGradient)!important;
+  stroke-width:4!important;
+  stroke-linecap:round!important;
+  stroke-dasharray:120 1880!important;
+  filter:url(#ilbpGlow)!important;
+  animation:ilbpLedRun 5.2s linear infinite!important;
+}
+@keyframes ilbpLedRun{to{stroke-dashoffset:-2000}}
+
+/* exatamente a lógica das duas órbitas originais do Bate Papo */
+.ilbp-lion-orbit{
+  display:block!important;
+  position:absolute!important;
+  left:1.8%!important;
+  top:7%!important;
+  width:39%!important;
+  height:82%!important;
+  box-sizing:border-box!important;
+  border:3px solid transparent!important;
+  border-top-color:#20d8ff!important;
+  border-right-color:#0a8cff!important;
+  border-bottom-color:#ff24bd!important;
+  border-radius:50%!important;
+  z-index:3!important;
+  filter:drop-shadow(0 0 8px #20d8ff)!important;
+  animation:ilbpLionOrbit 3.7s linear infinite!important;
+  pointer-events:none!important;
+}
+.ilbp-lion-orbit.two{
+  left:5.2%!important;
+  top:11%!important;
+  width:33%!important;
+  height:73%!important;
+  border-width:2px!important;
+  border-top-color:#ffc843!important;
+  border-right-color:transparent!important;
+  border-bottom-color:#20d8ff!important;
+  animation-duration:5.2s!important;
+  animation-direction:reverse!important;
+}
+@keyframes ilbpLionOrbit{to{transform:rotate(360deg)}}
+
+/* globo e esfera/ponto luminoso: mesmas posições e movimento do original */
+.ilbp-globe-glow{
+  display:block!important;
+  position:absolute!important;
+  left:10%!important;
+  top:20%!important;
+  width:22%!important;
+  aspect-ratio:1!important;
+  border-radius:50%!important;
+  z-index:2!important;
+  background:radial-gradient(circle at 35% 32%,#3fe8ff2c,#076aff18 42%,transparent 72%)!important;
+  box-shadow:0 0 24px #00c8ff99,0 0 55px #0077ff55!important;
+  animation:ilbpGlobePulse 2.6s ease-in-out infinite!important;
+  pointer-events:none!important;
+}
+.ilbp-spark{
+  display:block!important;
+  position:absolute!important;
+  left:29%!important;
+  top:10%!important;
+  width:9px!important;
+  height:9px!important;
+  border-radius:50%!important;
+  background:white!important;
+  box-shadow:0 0 8px 3px #20d8ff,0 0 24px 9px #008cff!important;
+  z-index:4!important;
+  animation:ilbpSpark 4s linear infinite!important;
+  pointer-events:none!important;
+}
+@keyframes ilbpGlobePulse{50%{transform:scale(1.07);filter:brightness(1.35)}}
+@keyframes ilbpSpark{
+  0%{transform:translate(0,0)}
+  25%{transform:translate(8vw,1.5vw)}
+  50%{transform:translate(9vw,8vw)}
+  75%{transform:translate(1vw,9vw)}
+  100%{transform:translate(0,0)}
+}
+
+/* a foto/arte não gira nem cresce; só as camadas originais se movem */
+.v15Hero>img{transform:none!important;animation:none!important;filter:none!important}
+
+@media(max-width:680px){
+  .ilbp-lion-orbit{border-width:2px!important}
+  .ilbp-lion-orbit.two{border-width:1.5px!important}
+  .ilbp-frame-led{stroke-width:4!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .ilbp-frame-led,.ilbp-lion-orbit,.ilbp-globe-glow,.ilbp-spark{animation:none!important}
+}
