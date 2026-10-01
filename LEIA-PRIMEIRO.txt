@@ -1,34 +1,18 @@
-IL TALK CURSOS DE IDIOMAS — V8
+IL TALK CURSOS DE IDIOMAS — V9 NEON + IA
 
-V5 mantém o leão neon da V4 por enquanto. Ele pode servir bem à futura área infantil; depois podemos criar uma identidade mais sóbria para adolescentes/adultos sem perder a marca.
+VISUAL
+- Usa exatamente a imagem aprovada "IL TALK CURSOS DE IDIOMAS".
+- A imagem não é redesenhada.
+- Três pontos luminosos fazem movimento orbital sobre a região do leão.
+- Botão Sair incluído.
 
-AVANÇOS:
-- histórico da conversa salvo localmente para o protótipo;
-- idioma escolhido lembrado no navegador;
-- modos Aluno / Professor / Administração;
-- nivelamento por conversa;
-- japonês como foco inicial, com arquitetura multilíngue;
-- texto como caminho principal; microfone opcional;
-- voz pode ser desligada;
-- foto e arquivo selecionáveis;
-- botões neon com mudança de cor no hover.
+MIOKO IA
+- O frontend já envia conversa para AI_ENDPOINT configurado em config.js.
+- A função Supabase está em supabase/functions/il-ai/index.ts.
+- Usa OpenAI Responses API e, por padrão, gpt-5.6-luna.
+- Para a Mioko falar hoje: publique a função, configure OPENAI_API_KEY como Secret e coloque a URL da função em config.js.
+- A voz do protótipo usa speechSynthesis do navegador e é opcional. Texto continua funcionando sem microfone.
 
-AINDA PRECISA DE BACKEND PARA SER REAL:
-- autenticação Supabase;
-- IA Mioko online;
-- progresso persistente no banco;
-- upload privado;
-- avatar/videochamada de IA.
-
-SEGURANÇA:
-Este ZIP é independente e não altera IL Chats nem IL Bate Papo. Não substitua a raiz desses projetos com este pacote.
-
-NOVO NA V8
-- Refeito diretamente sobre a V5 estável.
-- Agora usa o arquivo REAL leao-interno-v7.png encontrado no pacote do IL Bate Papo.
-- O arquivo foi COPIADO para o IL Talk; o IL Bate Papo não foi modificado.
-- O leão dourado, globo e arcos neon são a própria arte aprovada.
-- Pontos luminosos adicionais percorrem órbitas ao redor do leão para dar movimento sem efeito de 'helicóptero'.
-- Login: IL TALK / CURSOS DE IDIOMAS + livros de Japonês e Inglês + lápis e borracha.
-- Dentro do curso: a mesma marca do leão no cabeçalho.
-- Botão Sair retorna ao login e preserva histórico local.
+SEGURANÇA
+- NUNCA coloque OPENAI_API_KEY em config.js, GitHub Pages ou JavaScript do navegador.
+- IL Chats e IL Bate Papo não são modificados por este ZIP.
