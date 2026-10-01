@@ -1,18 +1,10 @@
-IL TALK CURSOS DE IDIOMAS — V9 NEON + IA
+IL TALK CURSOS DE IDIOMAS — V10
 
-VISUAL
-- Usa exatamente a imagem aprovada "IL TALK CURSOS DE IDIOMAS".
-- A imagem não é redesenhada.
-- Três pontos luminosos fazem movimento orbital sobre a região do leão.
-- Botão Sair incluído.
-
-MIOKO IA
-- O frontend já envia conversa para AI_ENDPOINT configurado em config.js.
-- A função Supabase está em supabase/functions/il-ai/index.ts.
-- Usa OpenAI Responses API e, por padrão, gpt-5.6-luna.
-- Para a Mioko falar hoje: publique a função, configure OPENAI_API_KEY como Secret e coloque a URL da função em config.js.
-- A voz do protótipo usa speechSynthesis do navegador e é opcional. Texto continua funcionando sem microfone.
-
-SEGURANÇA
-- NUNCA coloque OPENAI_API_KEY em config.js, GitHub Pages ou JavaScript do navegador.
-- IL Chats e IL Bate Papo não são modificados por este ZIP.
+- Base: V5 estável.
+- Login reduzido para no máximo 720 px.
+- Imagem oficial anexada pelo usuário salva como assets/il-talk-logo.jpg.
+- Dentro do curso: cabeça do MESMO leão dourado adulto, extraída da própria arte oficial.
+- Não usa leão emoji/infantil no cabeçalho.
+- Esferas luminosas animadas no login e ao redor do leão interno.
+- IL Chats e IL Bate Papo não são alterados.
+- Próxima etapa funcional: conectar a função il-ai e testar Mioko IA.
