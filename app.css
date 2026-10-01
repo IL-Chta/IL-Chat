@@ -171,3 +171,59 @@
   0%,100%{box-shadow:0 0 0 transparent;filter:brightness(1)}
   50%{box-shadow:0 0 10px #00eaff55,0 0 18px #ff27c833;filter:brightness(1.07)}
 }
+
+/* ===== V18 — LEÃO LIMPO, REFERÊNCIA IL BATE PAPO =====
+   A arte do leão manda. Nada de elipses extras sobre a juba. */
+.lionSvg,.v15LionSvg,.insideOrbit,
+.lionOrbit,.lionOrbits,.orbit,.orbits{display:none!important}
+
+/* Moldura limpa. O segmento luminoso corre DENTRO dela, com folga. */
+.v15Hero{position:relative!important}
+.v15Hero::before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  border-radius:18px;
+  padding:2px;
+  background:conic-gradient(
+    from var(--worm-angle,0deg),
+    transparent 0deg 300deg,
+    rgba(0,234,255,.08) 310deg,
+    #00eaff 322deg,
+    #755cff 330deg,
+    #ff35c8 338deg,
+    #ffc94a 345deg,
+    transparent 354deg 360deg
+  );
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+  animation:v18Worm 6.4s linear infinite;
+  filter:drop-shadow(0 0 5px rgba(0,234,255,.45));
+  z-index:5;
+}
+@property --worm-angle{
+  syntax:"<angle>";
+  initial-value:0deg;
+  inherits:false;
+}
+@keyframes v18Worm{to{--worm-angle:360deg}}
+
+/* Desliga minhocas/bordas antigas para não duplicar o efeito. */
+.frameSvg,.wormPath,.worm,.frameWorm{display:none!important}
+
+/* O leão não cresce, não pulsa e não recebe filtros adicionais. */
+.v15Hero>img{
+  transform:none!important;
+  animation:none!important;
+  filter:none!important;
+}
+.v15Lion,.v15Lion img{
+  transform:none!important;
+  animation:none!important;
+  filter:none!important;
+}
+
+/* Dentro do curso: marca limpa. */
+.v15Lion::before,.v15Lion::after{display:none!important}

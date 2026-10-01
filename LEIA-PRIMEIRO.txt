@@ -1,10 +1,15 @@
-IL TALK V17 — REI DA SELVA
-- Mantém a proporção controlada da V16.
-- Remove o terceiro arco do login.
-- Apenas dois arcos finos e espaçados ao redor do leão.
-- Apenas duas esferas.
-- Arcos internos também ficaram mais finos/discretos.
-- Moldura mantém a luz percorrendo o contorno.
-- Livros pulsam de forma suave.
-- Objetivo: destacar o leão, não os efeitos.
-- Próxima fase: Mioko IA e depois avatar humano/natural.
+IL TALK V18 — LEÃO BATE PAPO / SEM GAIOLA LASER
+
+Correção cirúrgica baseada na comparação visual com o IL Bate Papo:
+- removidos os SVGs/elipses extras sobre a cabeça e a juba;
+- removidas órbitas adicionais que criavam aparência de gaiola;
+- a imagem original do leão passa a ser a protagonista;
+- nenhuma animação aumenta ou pulsa o leão;
+- removida a antiga moldura/minhoca duplicada;
+- nova luz percorre o contorno com 7 px de afastamento interno;
+- o segmento luminoso é curto, não vira uma segunda moldura;
+- dentro do curso, o leão também fica limpo, sem arames extras.
+
+Objetivo visual:
+mesma lógica do IL Bate Papo — leão forte e legível, neon como detalhe de movimento,
+não como estrutura prendendo a cabeça.
