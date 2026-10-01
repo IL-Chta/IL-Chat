@@ -1,0 +1,19 @@
+IL CHATS + IL IA — PRIMEIRA INTEGRAÇÃO
+
+IMPORTANTE: o motor de chamadas index-Dvj0lM6F.js NÃO foi alterado.
+
+Arquivos novos:
+- il-ai.js
+- il-ai.css
+- supabase/functions/il-ai/index.ts
+
+Alteração em index.html:
+- somente inclusão do CSS/JS da IL IA no final da página.
+
+PARA A IA RESPONDER:
+1. No Supabase, publique a Edge Function: il-ai
+2. Configure o secret OPENAI_API_KEY na Edge Function.
+3. Opcional: configure OPENAI_MODEL. Sem ele, a função usa gpt-6-astra.
+4. Não coloque a OPENAI_API_KEY no index.html, JavaScript público ou APK.
+
+A primeira versão é TEXTO. Voz em tempo real e avatar serão adicionados depois de validar esta etapa.
