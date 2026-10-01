@@ -1,20 +1,20 @@
-IL TALK CURSOS — PRIMEIRO PROTÓTIPO
+IL TALK CURSOS — MIOKO IA V2
 
-Este ZIP contém SOMENTE a nova área de cursos, de forma isolada.
-Ele NÃO substitui o IL Chats atual e NÃO altera o motor de câmera/chamadas.
+NOVO NESTA VERSÃO
+- Sala da Professora Mioko por texto.
+- Botão de microfone usando reconhecimento de voz do navegador, quando disponível.
+- Leitura em voz alta da resposta pelo dispositivo.
+- Avaliação inicial por idioma.
+- Modelo de Supabase Edge Function para conectar a IA real via OpenAI Responses API.
 
-Incluído:
-- Inglês, Japonês, Coreano, Espanhol e Francês
-- Avaliação inicial
-- Estrutura de aula diária
-- Sala da Professora Virtual Mioko
-- Layout responsivo
+PROTEÇÃO
+Este pacote é separado. NÃO contém e NÃO altera o motor de câmera/chamadas do IL Chats.
+Não envie por cima da raiz do IL Chats funcionando.
 
-Ainda não ativado:
-- IA real
-- voz/áudio da professora
-- webcam da professora
-- trava de acesso Professor Ildebrando + Mioko
+PARA A IA RESPONDER DE VERDADE
+1. Publique supabase/functions/il-ai/index.ts no Supabase.
+2. Configure OPENAI_API_KEY nos Secrets do Supabase. Nunca no GitHub/navegador.
+3. Em config.js informe a URL HTTPS da função em AI_ENDPOINT.
+4. Antes de produção, restrinja CORS e valide autenticação/autorização no servidor.
 
-Esses itens dependem da integração segura com backend/autenticação e serão feitos na próxima etapa.
-NÃO envie este ZIP por cima da raiz do IL Chats funcionando. Teste a pasta separadamente.
+A webcam da professora IA não foi adicionada nesta etapa para não tocar na câmera funcional.
