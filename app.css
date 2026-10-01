@@ -140,3 +140,34 @@
  .v15Lion,.v15Lion svg{width:62px!important;height:62px!important;min-width:62px!important;max-width:62px!important}
  .v15Lion{flex-basis:62px!important}
 }
+
+/* ===== V17 — REI DA SELVA: poucos arcos, finos e elegantes ===== */
+.arc{
+  stroke-width:2.2!important;
+  stroke-dasharray:92 55!important;
+  opacity:.68!important;
+  filter:drop-shadow(0 0 3px currentColor)!important;
+}
+.a1{stroke:#00eaff!important;animation-duration:6.2s!important}
+.a2{stroke:#ff35c8!important;animation-duration:8s!important;opacity:.52!important}
+.ball{r:7}
+.lionSvg{opacity:.9!important}
+
+/* Dentro: ainda mais discreto */
+.ia{
+  stroke-width:1.6!important;
+  stroke-dasharray:30 22!important;
+  opacity:.62!important;
+}
+.ia1{stroke:#00eaff!important}.ia2{stroke:#ff35c8!important;opacity:.46!important}
+.ib{opacity:.9!important}
+
+/* Moldura: uma única "minhoca" principal; segunda quase imperceptível se herdada */
+.wormPath{stroke-width:3.2!important;stroke-dasharray:9 91!important;opacity:.85!important;animation-duration:7s!important}
+
+/* Livros: brilho elegante, sem pisca-pisca agressivo */
+.bookGlow{animation-duration:3.4s!important}
+@keyframes books{
+  0%,100%{box-shadow:0 0 0 transparent;filter:brightness(1)}
+  50%{box-shadow:0 0 10px #00eaff55,0 0 18px #ff27c833;filter:brightness(1.07)}
+}

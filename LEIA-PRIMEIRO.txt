@@ -1,13 +1,10 @@
-IL TALK V16 — LEÃO PROPORCIONAL
-
-Correção da V15:
-- não altera a arte aprovada;
-- não redesenha os arcos/esferas;
-- fixa o login em no máximo 680 px;
-- fixa a arte principal em no máximo 640 px;
-- mantém o leão dentro da metade esquerda da arte;
-- leão interno fixado em 76 x 76 px no desktop e 62 x 62 px no celular;
-- nenhuma animação pode aumentar o tamanho do layout;
-- mantém livros, arcos, esferas e neon da V15.
-
-Objetivo: nem leão gigante, nem leão anão.
+IL TALK V17 — REI DA SELVA
+- Mantém a proporção controlada da V16.
+- Remove o terceiro arco do login.
+- Apenas dois arcos finos e espaçados ao redor do leão.
+- Apenas duas esferas.
+- Arcos internos também ficaram mais finos/discretos.
+- Moldura mantém a luz percorrendo o contorno.
+- Livros pulsam de forma suave.
+- Objetivo: destacar o leão, não os efeitos.
+- Próxima fase: Mioko IA e depois avatar humano/natural.
