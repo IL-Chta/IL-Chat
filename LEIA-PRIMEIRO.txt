@@ -1,0 +1,20 @@
+IL TALK CURSOS — PRIMEIRO PROTÓTIPO
+
+Este ZIP contém SOMENTE a nova área de cursos, de forma isolada.
+Ele NÃO substitui o IL Chats atual e NÃO altera o motor de câmera/chamadas.
+
+Incluído:
+- Inglês, Japonês, Coreano, Espanhol e Francês
+- Avaliação inicial
+- Estrutura de aula diária
+- Sala da Professora Virtual Mioko
+- Layout responsivo
+
+Ainda não ativado:
+- IA real
+- voz/áudio da professora
+- webcam da professora
+- trava de acesso Professor Ildebrando + Mioko
+
+Esses itens dependem da integração segura com backend/autenticação e serão feitos na próxima etapa.
+NÃO envie este ZIP por cima da raiz do IL Chats funcionando. Teste a pasta separadamente.
