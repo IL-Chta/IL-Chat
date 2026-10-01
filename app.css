@@ -354,3 +354,57 @@
 @media(prefers-reduced-motion:reduce){
   .ilbp-frame-led,.ilbp-lion-orbit,.ilbp-globe-glow,.ilbp-spark{animation:none!important}
 }
+
+/* V20 — SOMENTE o ajuste pedido após comparação dos dois vídeos.
+   1) sem moldura/trilho visível; 2) minhoca permanece;
+   3) esfera permanece; 4) menos arco; 5) idem no leão interno. */
+
+/* trilho invisível de verdade */
+.ilbp-frame-track{stroke:transparent!important;opacity:0!important}
+
+/* a minhoca continua exatamente no mesmo caminho, sem borda estática */
+.ilbp-frame-led{
+  display:block!important;
+  stroke-width:4!important;
+  stroke-dasharray:105 1895!important;
+  opacity:.92!important;
+}
+
+/* menos "arame": primeiro arco incompleto e mais transparente */
+.ilbp-lion-orbit{
+  border-width:2px!important;
+  border-left-color:transparent!important;
+  border-right-color:transparent!important;
+  border-top-color:#20d8ff!important;
+  border-bottom-color:#ff24bd!important;
+  opacity:.72!important;
+}
+/* segundo arco ainda mais leve; mantém movimento e não cria gaiola */
+.ilbp-lion-orbit.two{
+  border-width:1.5px!important;
+  border-right-color:transparent!important;
+  border-left-color:transparent!important;
+  border-top-color:#ffc843!important;
+  border-bottom-color:#20d8ff!important;
+  opacity:.56!important;
+}
+/* esfera/ponto do leão permanece */
+.ilbp-spark{display:block!important;opacity:1!important}
+
+/* LEÃO DE DENTRO: remove qualquer argola herdada das versões antigas.
+   Fica a própria arte do leão, sem círculos CSS adicionais. */
+.v15Lion svg,.v15Lion .ia,.v15Lion .ia1,.v15Lion .ia2,
+.v15Lion .ib,.v15Lion::before,.v15Lion::after{
+  display:none!important;
+}
+.v15Lion{
+  overflow:hidden!important;
+  border-radius:50%!important;
+  box-shadow:0 0 12px rgba(32,216,255,.28)!important;
+}
+.v15Lion img{
+  display:block!important;
+  width:100%!important;height:100%!important;
+  object-fit:cover!important;
+  transform:none!important;animation:none!important;
+}

@@ -1,14 +1,8 @@
-IL TALK V19 — MOTOR ORIGINAL DO IL BATE PAPO
-
-Nesta versão não foi inventado outro efeito.
-
-A estrutura e os parâmetros principais foram copiados do efeito atual do repositório
-ILBate-papo/IL-Bate-Papo:
-- duas órbitas do leão: mesmas posições, tamanhos, cores e velocidades;
-- globo luminoso: mesma posição e pulsação;
-- esfera/ponto luminoso: mesma trajetória e velocidade;
-- LED do perímetro: mesmo dash 120/1880 e velocidade 5.2 s;
-- gradiente do LED: ciano -> azul -> rosa;
-- trilho/moldura estática foi tornado TRANSPARENTE conforme a referência visual pedida.
-
-O IL Talk mantém sua própria arte e conteúdo. Não foi alterado o IL Bate Papo.
+IL TALK V20 — AJUSTE CIRÚRGICO
+Feito após comparar os dois vídeos enviados:
+- moldura/trilho estático: invisível;
+- minhoca LED colorida: mantida circulando;
+- esfera luminosa no leão: mantida;
+- arcos: reduzidos visualmente, sem retirar a animação;
+- leão interno: retiradas as argolas extras herdadas;
+- nenhuma outra parte do projeto foi redesenhada.
