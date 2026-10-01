@@ -1,8 +1,13 @@
-IL TALK V15 — ARCOS BATE PAPO
-- Removidos os bastões retos da V14.
-- Moldura: segmento neon colorido percorre continuamente o contorno.
-- Leão do login: três arcos elípticos curvos, em inclinações diferentes, com brilho e movimento por dash.
-- Três esferas percorrem caminhos curvos ao redor do leão.
-- Livros pulsam suavemente.
-- Interior: leão dourado adulto maior, vivo, com dois arcos curvos e duas esferas.
-- Imagens críticas continuam embutidas no HTML.
+IL TALK V16 — LEÃO PROPORCIONAL
+
+Correção da V15:
+- não altera a arte aprovada;
+- não redesenha os arcos/esferas;
+- fixa o login em no máximo 680 px;
+- fixa a arte principal em no máximo 640 px;
+- mantém o leão dentro da metade esquerda da arte;
+- leão interno fixado em 76 x 76 px no desktop e 62 x 62 px no celular;
+- nenhuma animação pode aumentar o tamanho do layout;
+- mantém livros, arcos, esferas e neon da V15.
+
+Objetivo: nem leão gigante, nem leão anão.
