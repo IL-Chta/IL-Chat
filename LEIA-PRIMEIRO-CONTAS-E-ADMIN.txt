@@ -1,0 +1,13 @@
+IL CHATS — CONTAS, PRIVACIDADE E ADMINISTRAÇÃO
+
+1. Este pacote PRESERVA o motor de câmera/chamadas que funcionou no teste físico.
+2. Corrige o logotipo de login para logo-chats.png e remove o nome pessoal da apresentação.
+3. Adiciona controles para:
+   - contatos aceitos por cada usuário;
+   - remover contato;
+   - bloquear contato;
+   - excluir a própria conta;
+   - administrador listar/suspender/excluir contas, sem ler mensagens.
+4. Para ativar os controles de banco, execute UMA VEZ o arquivo account-controls.sql no SQL Editor do Supabase.
+5. Não altere index-Dvj0lM6F.js além das três substituições de branding já feitas. A rotina de câmera/WebRTC foi preservada.
+6. Faça primeiro um teste com uma conta de teste antes de excluir contas reais.
