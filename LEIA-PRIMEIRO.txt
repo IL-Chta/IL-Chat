@@ -1,8 +1,12 @@
-IL TALK V12 — NEON IL BATE PAPO
-Ajustado a partir dos vídeos enviados em 01/10/2026:
-- segmento de neon ("minhoca") percorre o perímetro da moldura, em vez de girar a moldura inteira;
-- segundo segmento muda a combinação de cores;
-- leão do login recebe três órbitas neon inclinadas e esferas luminosas;
-- interior usa o mesmo leão adulto/dourado e efeitos neon/esferas;
-- imagens têm nomes simples: assets/logo-il-talk.jpg e assets/leao-il-talk.jpg;
-- sem leão infantil.
+IL TALK V13 — IMAGENS EMBUTIDAS
+
+Correção específica do problema visto no vídeo:
+- logo do login embutido diretamente no index.html em Base64;
+- leão dourado interno embutido diretamente no index.html em Base64;
+- o navegador não depende mais do caminho assets/... para essas imagens;
+- mantidos os efeitos neon/esferas da V12;
+- não altera IL Chats nem IL Bate Papo.
+
+OBJETIVO DESTE PACOTE:
+Confirmar primeiro que a imagem aparece tanto no login quanto dentro do curso.
+Depois disso, congelar o visual e partir para Mioko IA.
