@@ -595,3 +595,70 @@
 .v15Lion .insideOrbit,.v15Lion .orbit,.v15Lion .orbits{
   display:none!important;
 }
+
+/* ==========================================================
+   V24 — FOTO LIMPA + EFEITOS EXCLUSIVAMENTE CSS/SVG
+   Referência: comportamento do segundo vídeo enviado.
+   ========================================================== */
+.v15Hero.ilbp-mail-stage{
+  position:relative!important; overflow:visible!important; padding:0!important;
+  border:0!important; outline:0!important; box-shadow:none!important;
+  background:transparent!important; filter:none!important; border-radius:0!important;
+}
+.v15Hero.ilbp-mail-stage::before,.v15Hero.ilbp-mail-stage::after{display:none!important;content:none!important}
+.talkHeroPhoto{
+  display:block!important; width:100%!important; max-width:100%!important; height:auto!important;
+  margin:0!important; border:0!important; border-radius:0!important;
+  transform:none!important; animation:none!important; filter:none!important;
+}
+.ilbp-frame-svg,.ilbp-frame-track,.ilbp-frame-led,.frameSvg,.wormPath,
+.ilbp-lion-orbit,.ilbp-lion-orbit.two,.ilbp-spark,.ilbp-globe-glow,.bookGlow{display:none!important}
+
+.talkFx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:4}
+.talkWorm{
+  fill:none; stroke:url(#worm3); stroke-width:7; stroke-linecap:round;
+  stroke-dasharray:115 1885; filter:url(#talkGlow);
+  animation:talkWormRun 5.2s linear infinite;
+}
+@keyframes talkWormRun{to{stroke-dashoffset:-2000}}
+
+.talkArc{
+  fill:none; stroke:url(#orbit3); stroke-width:5; stroke-linecap:round;
+  filter:url(#talkGlow); opacity:.82;
+  stroke-dasharray:310 900;
+}
+.arcA{animation:talkArcA 4.8s linear infinite}
+.arcB{stroke-width:3.5;opacity:.66;animation:talkArcB 6.2s linear infinite reverse}
+@keyframes talkArcA{to{stroke-dashoffset:-1210}}
+@keyframes talkArcB{to{stroke-dashoffset:-1210}}
+
+.talkBall{fill:#fff;filter:url(#talkGlow)}
+.talkBall.cyan{stroke:#19dcff;stroke-width:5}
+.talkBall.pink{stroke:#ff35c8;stroke-width:4}
+
+/* Leão interno: uma órbita discreta e uma esfera; nada de árvore de Natal. */
+.v15Lion{
+  position:relative!important; overflow:visible!important; border:0!important; outline:0!important;
+  box-shadow:none!important; background:transparent!important; border-radius:0!important;
+}
+.v15Lion>img{
+  display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;
+  border:0!important;border-radius:0!important;transform:none!important;animation:none!important;filter:none!important;
+}
+.v15Lion::before,.v15Lion::after{display:none!important;content:none!important}
+.talkFxInside{display:block!important;inset:-8%!important;width:116%!important;height:116%!important}
+.insideArc{
+  fill:none;stroke:url(#inside3);stroke-width:2.2;stroke-linecap:round;
+  stroke-dasharray:65 260;filter:url(#insideGlow);opacity:.72;
+  animation:insideArcRun 4.2s linear infinite;
+}
+@keyframes insideArcRun{to{stroke-dashoffset:-325}}
+.insideBall{fill:#fff;stroke:#19dcff;stroke-width:2.3;filter:url(#insideGlow)}
+
+@media(max-width:680px){
+  .talkWorm{stroke-width:9}
+  .talkArc{stroke-width:6}.arcB{stroke-width:4}
+}
+@media(prefers-reduced-motion:reduce){
+  .talkWorm,.talkArc,.insideArc{animation:none!important}
+}

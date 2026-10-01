@@ -1,9 +1,9 @@
-IL TALK V23
-Correção feita depois de assistir ao vídeo 23:04:
-- a moldura azul estava gravada na própria imagem;
-- a imagem foi levemente ampliada/recortada para a linha azul sair da área visível;
-- não foi criada outra moldura;
-- a minhoca LED continua;
-- a esfera móvel continua;
-- removidos os arcos CSS adicionais do leão;
-- ficam apenas os arcos que já pertencem à arte original.
+IL TALK V24 — FOTO LIMPA + EFEITOS CSS/SVG
+
+- usa assets/il-talk-logo.png sem moldura gravada;
+- usa assets/il-talk-leao.png no leão interno;
+- a minhoquinha de 3 cores é SVG/CSS e percorre o perímetro sem trilho estático;
+- poucos arcos animados ficam somente na região do leão;
+- duas esferas luminosas orbitam o leão principal;
+- no leão interno há apenas um arco discreto e uma esfera em movimento;
+- nenhum efeito novo foi desenhado dentro das fotos.
