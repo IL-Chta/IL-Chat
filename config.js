@@ -1,2 +1,2 @@
-// NÃO coloque OPENAI_API_KEY aqui. Informe somente a URL HTTPS da sua função segura.
+// Somente URL pública da função segura. NUNCA coloque chave secreta no navegador.
 window.IL_TALK_CONFIG={AI_ENDPOINT:""};

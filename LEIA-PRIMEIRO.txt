@@ -1,20 +1,38 @@
-IL TALK CURSOS — MIOKO IA V2
+IL TALK CURSOS DE IDIOMAS — V3
 
-NOVO NESTA VERSÃO
-- Sala da Professora Mioko por texto.
-- Botão de microfone usando reconhecimento de voz do navegador, quando disponível.
-- Leitura em voz alta da resposta pelo dispositivo.
-- Avaliação inicial por idioma.
-- Modelo de Supabase Edge Function para conectar a IA real via OpenAI Responses API.
+IDENTIDADE
+- Tela de entrada IL Talk.
+- Faixa neon LED animada.
+- Leão e identidade própria.
+- Professora Virtual Mioko claramente identificada como IA.
 
-PROTEÇÃO
-Este pacote é separado. NÃO contém e NÃO altera o motor de câmera/chamadas do IL Chats.
-Não envie por cima da raiz do IL Chats funcionando.
+AULA / NIVELAMENTO
+- Japonês é o foco inicial, mas a arquitetura já permite outros idiomas.
+- A conversa começa sem presumir nível.
+- Mioko aumenta ou reduz dificuldade conforme o aluno.
+- Pode explicar em português e depois repetir no idioma estudado.
+- Comandos: mais devagar, português, repetir, mais difícil e somente no idioma.
+- Conversação livre: o aluno pode trazer assuntos variados e a Mioko usa a conversa para prática.
 
-PARA A IA RESPONDER DE VERDADE
-1. Publique supabase/functions/il-ai/index.ts no Supabase.
-2. Configure OPENAI_API_KEY nos Secrets do Supabase. Nunca no GitHub/navegador.
-3. Em config.js informe a URL HTTPS da função em AI_ENDPOINT.
-4. Antes de produção, restrinja CORS e valide autenticação/autorização no servidor.
+ACESSIBILIDADE
+- Texto funciona como caminho principal.
+- Microfone é OPCIONAL.
+- Voz pode ser desligada.
+- Área de câmera do aluno é opcional.
 
-A webcam da professora IA não foi adicionada nesta etapa para não tocar na câmera funcional.
+SALA
+- Layout preparado para vídeo da Mioko.
+- Controles visuais de vídeo, chamada, foto e arquivos.
+- Foto/arquivo já podem ser selecionados localmente; envio real exige storage/backend seguro.
+- O avatar de vídeo real e chamada de IA ainda NÃO estão implementados; os controles não fingem uma conexão inexistente.
+
+SEGURANÇA DO IL CHATS
+- Este ZIP é separado.
+- NÃO contém, NÃO substitui e NÃO altera o motor de câmera/chamadas do IL Chats.
+- Não envie este pacote por cima da raiz do IL Chats funcionando.
+
+BACKEND
+- Inclui modelo supabase/functions/il-ai/index.ts.
+- OPENAI_API_KEY deve ficar somente nos Secrets do servidor.
+- config.js recebe apenas a URL HTTPS da função.
+- Antes de produção: autenticação real, autorização, CORS restrito, quotas e persistência de progresso.
