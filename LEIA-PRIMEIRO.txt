@@ -1,4 +1,4 @@
-IL TALK CURSOS DE IDIOMAS — V7
+IL TALK CURSOS DE IDIOMAS — V8
 
 V5 mantém o leão neon da V4 por enquanto. Ele pode servir bem à futura área infantil; depois podemos criar uma identidade mais sóbria para adolescentes/adultos sem perder a marca.
 
@@ -23,10 +23,12 @@ AINDA PRECISA DE BACKEND PARA SER REAL:
 SEGURANÇA:
 Este ZIP é independente e não altera IL Chats nem IL Bate Papo. Não substitua a raiz desses projetos com este pacote.
 
-NOVO NA V7
-- Feita novamente sobre a V5 estável.
-- Usa o leão da referência visual aprovada pelo usuário no login e no cabeçalho interno.
-- Login agora traz IL TALK / CURSOS DE IDIOMAS e materiais de estudo: japonês e inglês, lápis/borracha.
-- Neon e ponto luminoso orbitam a marca.
-- Botão Sair volta ao login sem apagar o histórico local.
-- IL Chats e IL Bate Papo não são modificados por este pacote.
+NOVO NA V8
+- Refeito diretamente sobre a V5 estável.
+- Agora usa o arquivo REAL leao-interno-v7.png encontrado no pacote do IL Bate Papo.
+- O arquivo foi COPIADO para o IL Talk; o IL Bate Papo não foi modificado.
+- O leão dourado, globo e arcos neon são a própria arte aprovada.
+- Pontos luminosos adicionais percorrem órbitas ao redor do leão para dar movimento sem efeito de 'helicóptero'.
+- Login: IL TALK / CURSOS DE IDIOMAS + livros de Japonês e Inglês + lápis e borracha.
+- Dentro do curso: a mesma marca do leão no cabeçalho.
+- Botão Sair retorna ao login e preserva histórico local.
