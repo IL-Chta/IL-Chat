@@ -1,4 +1,4 @@
-IL TALK CURSOS DE IDIOMAS — V6
+IL TALK CURSOS DE IDIOMAS — V6V
 
 V5 mantém o leão neon da V4 por enquanto. Ele pode servir bem à futura área infantil; depois podemos criar uma identidade mais sóbria para adolescentes/adultos sem perder a marca.
 
@@ -24,9 +24,11 @@ SEGURANÇA:
 Este ZIP é independente e não altera IL Chats nem IL Bate Papo. Não substitua a raiz desses projetos com este pacote.
 
 
-NOVO NA V6:
-- Botão 🚪 Sair do curso no cabeçalho.
-- Ao sair, a tela do curso é fechada e o usuário volta ao login.
-- A fala da Mioko é interrompida ao sair.
-- A senha digitada é limpa.
-- O progresso/histórico local do aluno não é apagado, permitindo continuar depois.
+NOVO V6V
+- Refeito diretamente sobre a V5 (não sobre a V6 anterior).
+- Logotipo de login com visual dourado, dois halos neon e esfera luminosa orbital.
+- A esfera passa visualmente sobre a região IL TALK para criar profundidade.
+- Botão 🚪 Sair adicionado sem alterar a grade principal da V5.
+- Sair retorna ao login, interrompe a voz e limpa a senha.
+- Histórico/progresso local permanece preservado.
+- IL Chats e IL Bate Papo não fazem parte deste ZIP e não foram alterados.
