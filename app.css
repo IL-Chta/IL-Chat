@@ -408,3 +408,104 @@
   object-fit:cover!important;
   transform:none!important;animation:none!important;
 }
+
+/* ==========================================================
+   V21 — AJUSTE EXATO INDICADO NAS DUAS FOTOS DO USUÁRIO
+   NÃO redesenha o restante da tela.
+   ========================================================== */
+
+/* 1. ELIMINA a moldura externa apontada na primeira foto.
+      A única moldura visível passa a ser a própria moldura da arte. */
+.v15Hero,
+.v15Hero.ilbp-mail-stage{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  padding:0!important;
+  filter:none!important;
+}
+.v15Hero::before,.v15Hero::after,
+.ilbp-mail-stage::before,.ilbp-mail-stage::after{
+  content:none!important;
+  display:none!important;
+}
+
+/* 2. NÃO existe trilho/moldura de LED parada.
+      Só o pequeno trecho ("minhoca") percorre o perímetro. */
+.ilbp-frame-track{
+  display:none!important;
+  stroke:none!important;
+  opacity:0!important;
+}
+.ilbp-frame-svg{
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  overflow:visible!important;
+}
+.ilbp-frame-led{
+  display:block!important;
+  fill:none!important;
+  stroke:url(#ilbpFrameGradient)!important;
+  stroke-width:3.5!important;
+  stroke-linecap:round!important;
+  stroke-dasharray:82 1918!important;
+  opacity:.96!important;
+  filter:url(#ilbpGlow)!important;
+  animation:ilbpLedRun 5.2s linear infinite!important;
+}
+
+/* 3. LEÃO: somente UM arco adicional em movimento.
+      Desliga o segundo arco para não formar a "gaiola". */
+.ilbp-lion-orbit{
+  display:block!important;
+  left:1.8%!important;
+  top:7%!important;
+  width:39%!important;
+  height:82%!important;
+  border:2px solid transparent!important;
+  border-top-color:#20d8ff!important;
+  border-right-color:transparent!important;
+  border-bottom-color:#ff24bd!important;
+  border-left-color:transparent!important;
+  border-radius:50%!important;
+  opacity:.68!important;
+  animation:ilbpLionOrbit 3.7s linear infinite!important;
+}
+.ilbp-lion-orbit.two{
+  display:none!important;
+}
+
+/* 4. Mantém UMA esfera luminosa realmente em movimento ao redor do leão. */
+.ilbp-spark{
+  display:block!important;
+  width:8px!important;
+  height:8px!important;
+  opacity:1!important;
+  animation:ilbpSpark 4s linear infinite!important;
+}
+
+/* 5. Não adiciona outra esfera/globo artificial por CSS. */
+.ilbp-globe-glow{display:none!important}
+
+/* 6. LEÃO DE DENTRO: zero argolas adicionais.
+      Mantém somente a marca limpa, sem círculos herdados. */
+.v15Lion svg,
+.v15Lion .ia,.v15Lion .ia1,.v15Lion .ia2,.v15Lion .ib,
+.v15Lion .insideOrbit,.v15Lion .orbit,.v15Lion .orbits,
+.v15Lion::before,.v15Lion::after{
+  display:none!important;
+}
+.v15Lion{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  overflow:hidden!important;
+}
+.v15Lion img{
+  transform:none!important;
+  animation:none!important;
+  filter:none!important;
+}
