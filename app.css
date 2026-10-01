@@ -18,3 +18,22 @@
 .exitBtn{border-color:#ff5b72!important}
 @media(max-width:720px){.loginCard{width:min(94vw,620px)!important;padding:14px!important}.v10Lion{width:60px;height:60px;flex-basis:60px}}
 @media(prefers-reduced-motion:reduce){.spark,.mini{animation:none}}
+
+/* V11 — neon vivo como IL Bate Papo */
+.loginCard{width:min(720px,94vw)!important}
+.v11Hero{position:relative;max-width:680px;margin:0 auto 12px;border-radius:20px;overflow:hidden;isolation:isolate;box-shadow:0 0 18px #00d9ff44}
+.v11Hero>img{width:100%;display:block;border-radius:20px}
+.snake{position:absolute;inset:2px;border-radius:18px;pointer-events:none;z-index:8}
+.snakeA{background:conic-gradient(from 0deg,transparent 0 76%,#00eaff 80%,#fff 82%,#168bff 85%,transparent 89%);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);padding:3px;-webkit-mask-composite:xor;mask-composite:exclude;animation:snakeSpin 3.3s linear infinite;filter:drop-shadow(0 0 7px #00eaff)}
+.snakeB{inset:6px;background:conic-gradient(from 180deg,transparent 0 80%,#ff27c8 83%,#ffd44d 86%,transparent 90%);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);padding:2px;-webkit-mask-composite:xor;mask-composite:exclude;animation:snakeSpin 5s linear infinite reverse;filter:drop-shadow(0 0 6px #ff27c8)}
+@keyframes snakeSpin{to{transform:rotate(360deg)}}
+.orbital{position:absolute;width:11px;height:11px;border-radius:50%;background:white;z-index:9;box-shadow:0 0 5px #fff,0 0 13px #00eaff,0 0 28px #00eaff}
+.o1{left:24%;top:8%;transform-origin:0 115px;animation:ballSpin 3s linear infinite}.o2{left:24%;top:14%;transform-origin:0 95px;animation:ballSpin 4.2s linear infinite reverse;box-shadow:0 0 5px #fff,0 0 13px #ff27c8,0 0 25px #ff27c8}.o3{left:24%;top:19%;transform-origin:0 78px;animation:ballSpin 5.2s linear infinite;box-shadow:0 0 5px #fff,0 0 13px #ffd44d,0 0 25px #ffd44d}
+@keyframes ballSpin{to{transform:rotate(360deg)}}
+.v11Lion{position:relative;width:86px;height:86px;flex:0 0 86px;border-radius:50%;isolation:isolate}
+.v11Lion img{position:absolute;inset:8px;width:70px;height:70px;object-fit:cover;border-radius:50%;z-index:2;box-shadow:0 0 12px #00bfff88}
+.ring{position:absolute;left:4px;top:20px;width:78px;height:42px;border:2px solid #00eaff;border-radius:50%;z-index:3;box-shadow:0 0 7px #00eaff;animation:ringTurn 3.2s linear infinite}.r2{transform:rotate(62deg);border-color:#ff2ac8;box-shadow:0 0 7px #ff2ac8;animation-duration:4.4s;animation-direction:reverse}
+@keyframes ringTurn{to{transform:rotate(360deg)}}
+.ball{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;z-index:5;left:43px;top:5px;transform-origin:0 38px;animation:ballSpin 2.6s linear infinite;box-shadow:0 0 5px #fff,0 0 10px #00eaff}.b2{animation-duration:3.7s;animation-direction:reverse;box-shadow:0 0 5px #fff,0 0 10px #ff2ac8}
+@media(max-width:700px){.loginCard{width:94vw!important}.v11Lion{width:70px;height:70px;flex-basis:70px}.v11Lion img{inset:7px;width:56px;height:56px}.ring{width:64px;height:34px;top:18px}.ball{left:35px;transform-origin:0 31px}}
+@media(prefers-reduced-motion:reduce){.snake,.orbital,.ring,.ball{animation:none}}

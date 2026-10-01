@@ -1,10 +1,8 @@
-IL TALK CURSOS DE IDIOMAS — V10
-
-- Base: V5 estável.
-- Login reduzido para no máximo 720 px.
-- Imagem oficial anexada pelo usuário salva como assets/il-talk-logo.jpg.
-- Dentro do curso: cabeça do MESMO leão dourado adulto, extraída da própria arte oficial.
-- Não usa leão emoji/infantil no cabeçalho.
-- Esferas luminosas animadas no login e ao redor do leão interno.
-- IL Chats e IL Bate Papo não são alterados.
-- Próxima etapa funcional: conectar a função il-ai e testar Mioko IA.
+IL TALK V11 NEON
+- Imagem oficial mantida.
+- Login compacto.
+- Duas trilhas neon coloridas percorrem continuamente a moldura como no efeito do IL Bate Papo.
+- Três esferas luminosas orbitam a região do leão no login.
+- Dentro do curso: mesmo leão dourado adulto, com dois anéis neon e duas esferas em movimento.
+- Sem leão infantil.
+- Próximo passo: Mioko IA / backend.
