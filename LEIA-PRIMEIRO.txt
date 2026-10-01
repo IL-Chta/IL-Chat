@@ -1,12 +1,8 @@
-IL TALK V13 — IMAGENS EMBUTIDAS
-
-Correção específica do problema visto no vídeo:
-- logo do login embutido diretamente no index.html em Base64;
-- leão dourado interno embutido diretamente no index.html em Base64;
-- o navegador não depende mais do caminho assets/... para essas imagens;
-- mantidos os efeitos neon/esferas da V12;
-- não altera IL Chats nem IL Bate Papo.
-
-OBJETIVO DESTE PACOTE:
-Confirmar primeiro que a imagem aparece tanto no login quanto dentro do curso.
-Depois disso, congelar o visual e partir para Mioko IA.
+IL TALK V14
+- Usa a imagem aprovada enviada pelo usuário, embutida no HTML.
+- Neon da moldura percorre o perímetro como segmento ("minhoca"), sem girar o quadro.
+- Na zona do leão: quatro faixas neon com ângulos/sentidos diferentes, inspiradas no vídeo do IL Bate Papo.
+- Três esferas luminosas com trajetórias independentes.
+- Livros recebem pulso de brilho suave.
+- Dentro do curso: mesmo leão dourado adulto, recorte corrigido e embutido; neons laterais/diagonais e esferas.
+- Próxima etapa: Mioko IA.

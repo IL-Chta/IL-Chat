@@ -55,3 +55,54 @@
 .innerBall{position:absolute;width:7px;height:7px;border-radius:50%;background:white;left:45px;top:4px;z-index:6;transform-origin:0 41px;animation:orbPoint 2.8s linear infinite;box-shadow:0 0 5px white,0 0 12px #00eaff}.ib2{animation-duration:3.8s;animation-direction:reverse;box-shadow:0 0 5px white,0 0 12px #ff2ac8}
 @media(max-width:700px){.loginCard{width:94vw!important;padding:12px!important}.v12Lion{width:72px;height:72px;flex-basis:72px}.v12Lion img{width:60px;height:60px;inset:6px}.innerRunner{width:66px;height:38px;top:17px}.innerBall{left:36px;transform-origin:0 33px}}
 @media(prefers-reduced-motion:reduce){.frameRunner:before,.lionOrbit i,.innerRunner,.innerBall{animation:none}}
+
+/* ===== V14 — movimentos laterais/diagonais como referência do Bate Papo ===== */
+.loginCard{width:min(720px,94vw)!important;padding:16px!important}
+.v14Hero{position:relative;max-width:680px;margin:0 auto 12px;border-radius:20px;overflow:hidden;isolation:isolate;box-shadow:0 0 18px #00dfff44}
+.v14Hero .heroArt{display:block;width:100%;height:auto;border-radius:20px}
+
+/* Segmentos luminosos percorrem a moldura, sem girar o quadro */
+.borderSnake{position:absolute;z-index:12;width:125px;height:4px;border-radius:999px;background:linear-gradient(90deg,transparent,#00eaff,#fff,#1588ff,transparent);filter:drop-shadow(0 0 5px #00eaff) drop-shadow(0 0 11px #00eaff);animation:walkFrame 7s linear infinite}
+.bs2{width:95px;animation-duration:9s;animation-delay:-4s;background:linear-gradient(90deg,transparent,#ff27c8,#ffd34e,#00eaff,transparent);filter:drop-shadow(0 0 5px #ff27c8) drop-shadow(0 0 10px #ffd34e)}
+@keyframes walkFrame{
+0%{left:2%;top:1%;transform:rotate(0deg)}
+24%{left:80%;top:1%;transform:rotate(0deg)}
+25%{left:96%;top:3%;transform:rotate(90deg)}
+49%{left:96%;top:82%;transform:rotate(90deg)}
+50%{left:80%;top:98%;transform:rotate(180deg)}
+74%{left:2%;top:98%;transform:rotate(180deg)}
+75%{left:1%;top:82%;transform:rotate(270deg)}
+99%{left:1%;top:3%;transform:rotate(270deg)}
+100%{left:2%;top:1%;transform:rotate(360deg)}
+}
+
+/* Faixas atravessam SOMENTE a zona do leão, com inclinações e sentidos diferentes */
+.sweep{position:absolute;left:-8%;width:58%;height:4px;border-radius:999px;z-index:8;opacity:.95;background:linear-gradient(90deg,transparent,#00dfff 18%,#fff 48%,#007cff 72%,transparent);filter:drop-shadow(0 0 5px #00eaff) drop-shadow(0 0 13px #00eaff);transform-origin:center}
+.sw1{top:31%;transform:rotate(18deg);animation:slideA 4.0s ease-in-out infinite}
+.sw2{top:48%;transform:rotate(-24deg);animation:slideB 5.2s ease-in-out infinite;background:linear-gradient(90deg,transparent,#ff29ca,#fff,#00eaff,transparent);filter:drop-shadow(0 0 5px #ff29ca) drop-shadow(0 0 12px #00eaff)}
+.sw3{top:62%;transform:rotate(8deg);animation:slideA 6.1s ease-in-out infinite reverse;background:linear-gradient(90deg,transparent,#ffd34e,#fff,#00dfff,transparent);filter:drop-shadow(0 0 5px #ffd34e) drop-shadow(0 0 12px #00dfff)}
+.sw4{top:40%;transform:rotate(62deg);animation:slideB 7.2s ease-in-out infinite reverse;opacity:.7}
+@keyframes slideA{0%,100%{translate:-15% -8px}50%{translate:18% 10px}}
+@keyframes slideB{0%,100%{translate:18% 8px}50%{translate:-14% -10px}}
+
+/* Esferas seguem trajetórias independentes */
+.sphere{position:absolute;width:10px;height:10px;border-radius:50%;background:#fff;z-index:11;box-shadow:0 0 5px #fff,0 0 13px #00eaff,0 0 25px #00eaff}
+.sp1{left:8%;top:28%;animation:sphereA 4.3s ease-in-out infinite}.sp2{left:39%;top:61%;animation:sphereB 5.5s ease-in-out infinite;box-shadow:0 0 5px #fff,0 0 13px #ff29ca,0 0 25px #ff29ca}.sp3{left:24%;top:15%;animation:sphereC 6.3s ease-in-out infinite;box-shadow:0 0 5px #fff,0 0 13px #ffd34e,0 0 25px #ffd34e}
+@keyframes sphereA{0%,100%{transform:translate(0,0)}35%{transform:translate(180px,105px)}70%{transform:translate(70px,250px)}}
+@keyframes sphereB{0%,100%{transform:translate(0,0)}40%{transform:translate(-175px,-150px)}75%{transform:translate(-75px,55px)}}
+@keyframes sphereC{0%,100%{transform:translate(0,0)}50%{transform:translate(120px,220px)}}
+
+/* livros piscam/pulsam suavemente na metade direita da arte */
+.booksPulse{position:absolute;z-index:6;right:3%;bottom:7%;width:44%;height:47%;border-radius:18px;pointer-events:none;animation:booksGlow 2.2s ease-in-out infinite}
+@keyframes booksGlow{0%,100%{box-shadow:0 0 4px transparent;filter:brightness(1)}50%{box-shadow:0 0 14px #00dfff66,0 0 26px #ff2ac844,inset 0 0 18px #ffd34e22;filter:brightness(1.12)}}
+
+/* Leão adulto dentro do curso */
+.v14Lion{position:relative;width:92px;height:92px;flex:0 0 92px;border-radius:50%;overflow:hidden;isolation:isolate;box-shadow:0 0 10px #00dfff77}
+.v14Lion img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 50%;z-index:1}
+.isweep{position:absolute;left:-20%;width:140%;height:3px;border-radius:99px;z-index:4;background:linear-gradient(90deg,transparent,#00eaff,#fff,#167cff,transparent);filter:drop-shadow(0 0 5px #00eaff);animation:insideSweep 3.4s ease-in-out infinite}
+.is1{top:35%;transform:rotate(18deg)}.is2{top:52%;transform:rotate(-27deg);animation-duration:4.5s;background:linear-gradient(90deg,transparent,#ff29ca,#fff,#00eaff,transparent)}.is3{top:66%;transform:rotate(8deg);animation-duration:5.4s;background:linear-gradient(90deg,transparent,#ffd34e,#fff,#00eaff,transparent)}
+@keyframes insideSweep{0%,100%{translate:-18% 0}50%{translate:18% 0}}
+.iball{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;z-index:6;left:12%;top:25%;box-shadow:0 0 5px #fff,0 0 10px #00eaff;animation:insideBall 3s ease-in-out infinite}.ib2{left:68%;top:65%;animation-duration:4.1s;animation-direction:reverse;box-shadow:0 0 5px #fff,0 0 10px #ff29ca}
+@keyframes insideBall{0%,100%{transform:translate(0,0)}50%{transform:translate(52px,34px)}}
+@media(max-width:700px){.loginCard{padding:12px!important}.v14Lion{width:72px;height:72px;flex-basis:72px}}
+@media(prefers-reduced-motion:reduce){.borderSnake,.sweep,.sphere,.booksPulse,.isweep,.iball{animation:none}}
