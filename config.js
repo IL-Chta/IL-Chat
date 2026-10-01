@@ -1,2 +1,2 @@
-// Somente URL pública da função segura. NUNCA coloque chave secreta no navegador.
+// Informe somente a URL HTTPS da função segura. Nunca coloque chave secreta aqui.
 window.IL_TALK_CONFIG={AI_ENDPOINT:""};

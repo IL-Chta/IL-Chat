@@ -1,38 +1,21 @@
-IL TALK CURSOS DE IDIOMAS — V3
+IL TALK CURSOS DE IDIOMAS — V4 NEON
 
-IDENTIDADE
-- Tela de entrada IL Talk.
-- Faixa neon LED animada.
-- Leão e identidade própria.
-- Professora Virtual Mioko claramente identificada como IA.
+VISUAL
+- Leão com anéis LED/neon animados no login.
+- Leão brilhante também dentro do curso.
+- Botões com neon discreto e mudança de cor ao passar o mouse.
+- Identidade IL TALK CURSOS DE IDIOMAS.
 
-AULA / NIVELAMENTO
-- Japonês é o foco inicial, mas a arquitetura já permite outros idiomas.
-- A conversa começa sem presumir nível.
-- Mioko aumenta ou reduz dificuldade conforme o aluno.
-- Pode explicar em português e depois repetir no idioma estudado.
-- Comandos: mais devagar, português, repetir, mais difícil e somente no idioma.
-- Conversação livre: o aluno pode trazer assuntos variados e a Mioko usa a conversa para prática.
-
-ACESSIBILIDADE
-- Texto funciona como caminho principal.
-- Microfone é OPCIONAL.
+FUNCIONAL
+- Sala da Mioko, nivelamento adaptativo e conversa multilíngue.
+- Japonês permanece o foco inicial.
+- Texto é o caminho principal; microfone é opcional.
 - Voz pode ser desligada.
-- Área de câmera do aluno é opcional.
+- Foto e arquivo abrem o seletor; upload real exige storage/backend.
+- Vídeo/chamada da Mioko estão identificados como preparação: não fingem conexão real.
 
-SALA
-- Layout preparado para vídeo da Mioko.
-- Controles visuais de vídeo, chamada, foto e arquivos.
-- Foto/arquivo já podem ser selecionados localmente; envio real exige storage/backend seguro.
-- O avatar de vídeo real e chamada de IA ainda NÃO estão implementados; os controles não fingem uma conexão inexistente.
-
-SEGURANÇA DO IL CHATS
-- Este ZIP é separado.
-- NÃO contém, NÃO substitui e NÃO altera o motor de câmera/chamadas do IL Chats.
-- Não envie este pacote por cima da raiz do IL Chats funcionando.
-
-BACKEND
-- Inclui modelo supabase/functions/il-ai/index.ts.
-- OPENAI_API_KEY deve ficar somente nos Secrets do servidor.
-- config.js recebe apenas a URL HTTPS da função.
-- Antes de produção: autenticação real, autorização, CORS restrito, quotas e persistência de progresso.
+IMPORTANTE
+- Login desta V4 ainda é demonstrativo. Autenticação real será ligada ao Supabase.
+- A IA real exige publicar supabase/functions/il-ai/index.ts, configurar OPENAI_API_KEY nos Secrets e informar a URL em config.js.
+- Este pacote é independente. NÃO substitua a raiz do IL Chats ou IL Bate Papo com ele.
+- Nenhum motor de câmera/chamada existente foi incluído ou alterado.

@@ -1,18 +1,31 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IL Talk Cursos de Idiomas — Mioko IA</title><link rel="stylesheet" href="app.css"></head><body>
-<div class="neon"></div><header><div class="brand"><span class="lion">🦁</span><div><b>IL TALK</b><small>CURSOS DE IDIOMAS</small></div></div><span class="tag">APRENDA CONVERSANDO COM IA</span></header>
-<main><section id="login" class="card login"><h1>Bem-vindo ao IL Talk</h1><p>Entre na sua sala de idiomas.</p><input id="email" type="email" placeholder="Seu e-mail"><input id="password" type="password" placeholder="Sua senha"><button id="enter" class="gold">Entrar no protótipo</button><small>V3 de demonstração. A autenticação real será ligada ao Supabase antes da publicação.</small></section>
-<section id="app" class="hidden">
-<div class="modebar"><b>🦁 IL Talk Cursos</b><div><button class="active">🎓 Aluno</button><button>👨‍🏫 Professor</button><button>🛡️ Administração</button></div></div>
-<section class="hero card"><div><small>PROFESSORA VIRTUAL MULTILÍNGUE</small><h1>Converse primeiro.<br>A Mioko descobre de onde você deve começar.</h1><p>Do iniciante à conversação avançada. A professora adapta idioma, velocidade e dificuldade durante a conversa.</p></div><div class="teacher"><div class="face">👩🏻‍🏫</div><h2>Mioko</h2><p>Professora Virtual • IA</p><span>● disponível</span></div></section>
-<section class="card"><h2>Idioma da conversa</h2><div class="languages"><button data-lang="Japonês" class="selected">🇯🇵 Japonês</button><button data-lang="Inglês">🇬🇧 Inglês</button><button data-lang="Espanhol">🇪🇸 Espanhol</button><button data-lang="Francês">🇫🇷 Francês</button><button data-lang="Coreano">🇰🇷 Coreano</button><button data-lang="Outro idioma">🌐 Outro</button></div></section>
-<section class="room card"><div class="roomhead"><div><h2>📹 Sala da Professora Mioko</h2><p id="status">Japonês • nivelamento inteligente</p></div><button id="startAssessment" class="gold">Começar conversa</button></div>
-<div class="video"><div class="miokoVideo"><div class="avatar">👩🏻‍🏫</div><b>Mioko IA</b><span>Área preparada para avatar de vídeo da professora</span></div><div class="studentVideo"><div>👤</div><b>Você</b><span>Câmera opcional</span></div></div>
-<div class="controls"><button>📹 Vídeo</button><button id="voice">🔊 Voz</button><button id="mic">🎙️ Microfone opcional</button><button id="photo">📷 Foto</button><button id="file">📎 Arquivo</button><button>📞 Chamada</button></div>
-<input id="photoInput" type="file" accept="image/*" capture="environment" hidden><input id="fileInput" type="file" hidden>
-<div id="chat" class="chat"><div class="ai"><b>Mioko IA</b><p>こんにちは。私はミオコです。Podemos começar em japonês e, se você não entender, eu explico em português e tento novamente.</p></div></div>
-<div class="composer"><textarea id="message" placeholder="Escreva normalmente. O microfone é opcional."></textarea><button id="send" class="gold">Enviar</button></div>
-<div class="quick"><button data-q="Repita mais devagar.">🐢 Mais devagar</button><button data-q="Explique em português e depois repita no idioma que estou estudando.">🇧🇷 Explique em português</button><button data-q="Repita sem tradução.">🔁 Repita</button><button data-q="Aumente a dificuldade.">🚀 Mais difícil</button><button data-q="Vamos conversar somente no idioma escolhido.">💬 Só no idioma</button></div>
+<title>IL Talk Cursos de Idiomas</title><link rel="stylesheet" href="app.css"></head><body>
+<section id="login" class="login-screen">
+  <div class="login-card">
+    <div class="lion-neon"><div class="orbit o1"></div><div class="orbit o2"></div><div class="lion">🦁</div></div>
+    <h1>IL TALK</h1><h2>CURSOS DE IDIOMAS</h2><p>Aprenda conversando com inteligência artificial.</p>
+    <input id="email" type="email" placeholder="E-mail"><input id="password" type="password" placeholder="Senha">
+    <button id="enter" class="neon-btn">ENTRAR</button><small>V4 de teste — autenticação real será conectada ao Supabase.</small>
+  </div>
 </section>
-<section class="card"><h2>Seu progresso</h2><div class="progress"><div><b>Nível</b><span id="level">Em avaliação</span></div><div><b>Compreensão</b><span>—</span></div><div><b>Conversação</b><span>—</span></div><div><b>Próxima aula</b><span>Continua daqui</span></div></div></section>
-</section></main><footer>🦁 IL Talk Cursos de Idiomas • experiência de aprendizagem com IA</footer><script src="config.js"></script><script src="app.js"></script></body></html>
+<section id="app" class="hidden">
+<header><div class="mini-brand"><div class="mini-lion">🦁</div><div><b>IL TALK</b><span>CURSOS DE IDIOMAS</span></div></div>
+<nav><button class="neon-btn active">🎓 Aluno</button><button class="neon-btn">👨‍🏫 Professor</button><button class="neon-btn">🛡️ Administração</button></nav></header>
+<main>
+<section class="hero panel"><div><small>PROFESSORA VIRTUAL MULTILÍNGUE</small><h1>Converse. Pratique.<br>Evolua no seu ritmo.</h1>
+<p>A Mioko adapta a conversa ao seu nível. Se você não entender, ela pode explicar em português e repetir no idioma estudado.</p></div>
+<div class="teacher"><div class="lion-neon small"><div class="orbit o1"></div><div class="orbit o2"></div><div class="lion">🦁</div></div><div class="mioko">👩🏻‍🏫</div><b>Mioko IA</b><span>Professora Virtual • disponível</span></div></section>
+
+<section class="panel"><h2>Idioma</h2><div class="langs"><button class="neon-btn selected" data-lang="Japonês">🇯🇵 Japonês</button><button class="neon-btn" data-lang="Inglês">🇬🇧 Inglês</button><button class="neon-btn" data-lang="Espanhol">🇪🇸 Espanhol</button><button class="neon-btn" data-lang="Francês">🇫🇷 Francês</button><button class="neon-btn" data-lang="Coreano">🇰🇷 Coreano</button><button class="neon-btn" data-lang="Outro idioma">🌐 Outro</button></div></section>
+
+<section class="panel classroom"><div class="room-head"><div><h2>📹 Sala da Professora Mioko</h2><p id="status">Japonês • nivelamento inteligente</p></div><button id="start" class="neon-btn">✨ COMEÇAR AULA</button></div>
+<div class="video-grid"><div class="video teacher-video"><div class="mioko-big">👩🏻‍🏫</div><b>Mioko IA</b><span>Avatar de vídeo será conectado em etapa própria</span></div><div class="video student-video"><div>👤</div><b>Você</b><span>Câmera opcional</span></div></div>
+<div class="toolbar"><button class="neon-btn disabled-real" title="Preparado visualmente; chamada IA ainda não conectada">📹 Vídeo</button><button class="neon-btn disabled-real">📞 Chamada</button><button id="voice" class="neon-btn">🔊 Voz</button><button id="mic" class="neon-btn">🎙️ Microfone opcional</button><button id="photo" class="neon-btn">📷 Foto</button><button id="file" class="neon-btn">📎 Arquivo</button></div>
+<input id="photoInput" type="file" accept="image/*" capture="environment" hidden><input id="fileInput" type="file" hidden>
+<div id="chat" class="chat"><div class="msg ai"><b>Mioko IA</b><p>こんにちは。私はミオコです。Podemos conversar em japonês. Se algo ficar difícil, eu explico em português e repetimos.</p></div></div>
+<div class="composer"><textarea id="message" placeholder="Escreva para a Mioko — o microfone não é obrigatório."></textarea><button id="send" class="neon-btn">💬 ENVIAR</button></div>
+<div class="quick"><button class="neon-btn" data-q="Repita mais devagar.">🐢 Mais devagar</button><button class="neon-btn" data-q="Explique em português e depois repita no idioma estudado.">🇧🇷 Português</button><button class="neon-btn" data-q="Repita novamente sem tradução.">🔁 Repetir</button><button class="neon-btn" data-q="Aumente a dificuldade da conversa.">🚀 Mais difícil</button><button class="neon-btn" data-q="Converse comigo somente no idioma escolhido.">💬 Só no idioma</button></div></section>
+
+<section class="panel"><h2>Progresso</h2><div class="progress"><div><b>Nível atual</b><span>Em avaliação</span></div><div><b>Compreensão</b><span>—</span></div><div><b>Conversação</b><span>—</span></div><div><b>Continuar</b><span>Do último ponto</span></div></div></section>
+</main><footer>🦁 IL Talk Cursos de Idiomas • IA para aprender conversando</footer></section>
+<script src="config.js"></script><script src="app.js"></script></body></html>
