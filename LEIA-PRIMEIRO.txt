@@ -1,15 +1,9 @@
-IL TALK V22 — SOMENTE SEM MOLDURA AZUL
-
-Nesta versão foi feita uma única correção:
-- ocultada a moldura azul fixa indicada na imagem enviada.
-
-Não foram alterados:
-- leão;
-- quantidade/posição dos arcos;
-- esfera;
-- movimento;
-- login;
-- botões;
-- conteúdo interno.
-
-A minhoca LED continua circulando e fica acima da máscara.
+IL TALK V23
+Correção feita depois de assistir ao vídeo 23:04:
+- a moldura azul estava gravada na própria imagem;
+- a imagem foi levemente ampliada/recortada para a linha azul sair da área visível;
+- não foi criada outra moldura;
+- a minhoca LED continua;
+- a esfera móvel continua;
+- removidos os arcos CSS adicionais do leão;
+- ficam apenas os arcos que já pertencem à arte original.

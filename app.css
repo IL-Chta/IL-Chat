@@ -542,3 +542,56 @@
   stroke:none!important;
   opacity:0!important;
 }
+
+/* V23 — baseado no vídeo 23:04.
+   A linha azul está DENTRO da própria arte; portanto não adianta criar
+   outra borda por cima. Cortamos somente a beirada da imagem. */
+
+/* remove a tentativa anterior de máscara/borda */
+.v15Hero.ilbp-mail-stage::after{
+  content:none!important;
+  display:none!important;
+  box-shadow:none!important;
+}
+
+/* recorta a beirada azul que vem gravada na imagem */
+.v15Hero.ilbp-mail-stage{
+  overflow:hidden!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:#06101c!important;
+}
+.v15Hero.ilbp-mail-stage>img{
+  width:102.8%!important;
+  max-width:none!important;
+  height:auto!important;
+  margin-left:-1.4%!important;
+  margin-top:-1.4%!important;
+  margin-bottom:-1.4%!important;
+  transform:none!important;
+  animation:none!important;
+}
+
+/* mantém somente a minhoca, sem trilho */
+.ilbp-frame-track{display:none!important;stroke:none!important}
+.ilbp-frame-svg{z-index:7!important}
+.ilbp-frame-led{display:block!important}
+
+/* tira mais um "arame" artificial: nenhum arco CSS adicional.
+   Permanecem os arcos que já fazem parte da arte e a esfera móvel. */
+.ilbp-lion-orbit,
+.ilbp-lion-orbit.two{
+  display:none!important;
+}
+.ilbp-spark{
+  display:block!important;
+  opacity:1!important;
+  animation:ilbpSpark 4s linear infinite!important;
+}
+
+/* leão interno também sem argolas artificiais */
+.v15Lion svg,.v15Lion::before,.v15Lion::after,
+.v15Lion .insideOrbit,.v15Lion .orbit,.v15Lion .orbits{
+  display:none!important;
+}
