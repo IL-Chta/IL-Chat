@@ -1,0 +1,8 @@
+IL CHATS — RESTAURAÇÃO CONTROLADA DAS CHAMADAS — BASE 29/08/2026
+
+Alteração única no carregamento principal:
+- o index.html deixa de carregar index-receber-video-20260906.js
+- volta a carregar index-Dvj0lM6F.js, exatamente o mesmo bundle (SHA-256 idêntico) presente no commit 4135139 de 29/08/2026 — Publicar recursos das chamadas em tempo real.
+
+O restante da versão atual foi preservado.
+Não apagar o outro repositório antes do teste físico de câmera/chamada.
