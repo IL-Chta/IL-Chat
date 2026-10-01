@@ -19,21 +19,39 @@
 @media(max-width:720px){.loginCard{width:min(94vw,620px)!important;padding:14px!important}.v10Lion{width:60px;height:60px;flex-basis:60px}}
 @media(prefers-reduced-motion:reduce){.spark,.mini{animation:none}}
 
-/* V11 — neon vivo como IL Bate Papo */
-.loginCard{width:min(720px,94vw)!important}
-.v11Hero{position:relative;max-width:680px;margin:0 auto 12px;border-radius:20px;overflow:hidden;isolation:isolate;box-shadow:0 0 18px #00d9ff44}
-.v11Hero>img{width:100%;display:block;border-radius:20px}
-.snake{position:absolute;inset:2px;border-radius:18px;pointer-events:none;z-index:8}
-.snakeA{background:conic-gradient(from 0deg,transparent 0 76%,#00eaff 80%,#fff 82%,#168bff 85%,transparent 89%);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);padding:3px;-webkit-mask-composite:xor;mask-composite:exclude;animation:snakeSpin 3.3s linear infinite;filter:drop-shadow(0 0 7px #00eaff)}
-.snakeB{inset:6px;background:conic-gradient(from 180deg,transparent 0 80%,#ff27c8 83%,#ffd44d 86%,transparent 90%);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);padding:2px;-webkit-mask-composite:xor;mask-composite:exclude;animation:snakeSpin 5s linear infinite reverse;filter:drop-shadow(0 0 6px #ff27c8)}
-@keyframes snakeSpin{to{transform:rotate(360deg)}}
-.orbital{position:absolute;width:11px;height:11px;border-radius:50%;background:white;z-index:9;box-shadow:0 0 5px #fff,0 0 13px #00eaff,0 0 28px #00eaff}
-.o1{left:24%;top:8%;transform-origin:0 115px;animation:ballSpin 3s linear infinite}.o2{left:24%;top:14%;transform-origin:0 95px;animation:ballSpin 4.2s linear infinite reverse;box-shadow:0 0 5px #fff,0 0 13px #ff27c8,0 0 25px #ff27c8}.o3{left:24%;top:19%;transform-origin:0 78px;animation:ballSpin 5.2s linear infinite;box-shadow:0 0 5px #fff,0 0 13px #ffd44d,0 0 25px #ffd44d}
-@keyframes ballSpin{to{transform:rotate(360deg)}}
-.v11Lion{position:relative;width:86px;height:86px;flex:0 0 86px;border-radius:50%;isolation:isolate}
-.v11Lion img{position:absolute;inset:8px;width:70px;height:70px;object-fit:cover;border-radius:50%;z-index:2;box-shadow:0 0 12px #00bfff88}
-.ring{position:absolute;left:4px;top:20px;width:78px;height:42px;border:2px solid #00eaff;border-radius:50%;z-index:3;box-shadow:0 0 7px #00eaff;animation:ringTurn 3.2s linear infinite}.r2{transform:rotate(62deg);border-color:#ff2ac8;box-shadow:0 0 7px #ff2ac8;animation-duration:4.4s;animation-direction:reverse}
-@keyframes ringTurn{to{transform:rotate(360deg)}}
-.ball{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;z-index:5;left:43px;top:5px;transform-origin:0 38px;animation:ballSpin 2.6s linear infinite;box-shadow:0 0 5px #fff,0 0 10px #00eaff}.b2{animation-duration:3.7s;animation-direction:reverse;box-shadow:0 0 5px #fff,0 0 10px #ff2ac8}
-@media(max-width:700px){.loginCard{width:94vw!important}.v11Lion{width:70px;height:70px;flex-basis:70px}.v11Lion img{inset:7px;width:56px;height:56px}.ring{width:64px;height:34px;top:18px}.ball{left:35px;transform-origin:0 31px}}
-@media(prefers-reduced-motion:reduce){.snake,.orbital,.ring,.ball{animation:none}}
+/* ===== V12 — movimento inspirado no vídeo IL Bate Papo ===== */
+.loginCard{width:min(720px,94vw)!important;padding:18px!important}
+.v12Hero{position:relative;max-width:680px;margin:0 auto 12px;border-radius:20px;overflow:hidden;isolation:isolate;box-shadow:0 0 16px #00dfff44}
+.v12Hero>img{width:100%;display:block;border-radius:20px}
+
+/* "minhoca": segmento curto percorre o PERÍMETRO; não gira a moldura */
+.frameRunner{position:absolute;inset:4px;border-radius:17px;pointer-events:none;z-index:9}
+.frameRunner:before{content:"";position:absolute;width:120px;height:4px;border-radius:99px;background:linear-gradient(90deg,transparent,#00eaff,#fff,#168bff,transparent);filter:drop-shadow(0 0 5px #00eaff) drop-shadow(0 0 10px #00eaff);animation:perimeter 7s linear infinite}
+.fr2:before{width:90px;animation-delay:-3.5s;animation-duration:9s;background:linear-gradient(90deg,transparent,#ff25c8,#ffd44d,#00eaff,transparent);filter:drop-shadow(0 0 5px #ff25c8) drop-shadow(0 0 10px #ffd44d)}
+@keyframes perimeter{
+0%{left:0;top:0;transform:rotate(0)}
+24%{left:calc(100% - 120px);top:0;transform:rotate(0)}
+25%{left:calc(100% - 4px);top:0;transform:rotate(90deg);transform-origin:left center}
+49%{left:calc(100% - 4px);top:calc(100% - 120px);transform:rotate(90deg);transform-origin:left center}
+50%{left:calc(100% - 120px);top:calc(100% - 4px);transform:rotate(180deg)}
+74%{left:0;top:calc(100% - 4px);transform:rotate(180deg)}
+75%{left:0;top:calc(100% - 4px);transform:rotate(270deg);transform-origin:left center}
+99%{left:0;top:0;transform:rotate(270deg);transform-origin:left center}
+100%{left:0;top:0;transform:rotate(360deg)}
+}
+
+/* Órbitas do leão: elipses inclinadas independentes, como no vídeo */
+.lionOrbit{position:absolute;left:4.3%;top:8%;width:43%;height:79%;border:2px solid #00eaff;border-radius:50%;z-index:7;box-shadow:0 0 7px #00eaff,inset 0 0 5px #00eaff;transform:rotate(-18deg)}
+.lionOrbit i{position:absolute;width:10px;height:10px;border-radius:50%;background:#fff;left:50%;top:-6px;box-shadow:0 0 5px #fff,0 0 14px #00eaff,0 0 28px #00eaff;animation:orbPoint 3.3s linear infinite;transform-origin:0 calc(39.5% + 85px)}
+.lo2{transform:rotate(42deg) scale(.91);border-color:#ff29c8;box-shadow:0 0 7px #ff29c8,inset 0 0 5px #ff29c8}.lo2 i{animation-duration:4.6s;animation-direction:reverse;box-shadow:0 0 5px #fff,0 0 14px #ff29c8,0 0 28px #ff29c8}
+.lo3{transform:rotate(72deg) scale(.82);border-color:#ffd34c;box-shadow:0 0 7px #ffd34c,inset 0 0 5px #ffd34c}.lo3 i{animation-duration:5.4s;box-shadow:0 0 5px #fff,0 0 14px #ffd34c,0 0 28px #ffd34c}
+@keyframes orbPoint{to{transform:rotate(360deg)}}
+
+/* Cabeçalho interno: a arte adulta permanece; luzes percorrem ao redor */
+.v12Lion{position:relative;width:90px;height:90px;flex:0 0 90px;border-radius:50%;overflow:visible}
+.v12Lion img{position:absolute;inset:7px;width:76px;height:76px;object-fit:cover;object-position:31% 50%;border-radius:50%;z-index:2;box-shadow:0 0 12px #00dfff77}
+.innerRunner{position:absolute;left:4px;top:21px;width:82px;height:48px;border:2px solid #00eaff;border-radius:50%;z-index:4;box-shadow:0 0 7px #00eaff;transform:rotate(-20deg);animation:pulseHue 3s linear infinite}.ir2{transform:rotate(55deg);border-color:#ff2ac8;box-shadow:0 0 7px #ff2ac8;animation-delay:-1.5s}
+@keyframes pulseHue{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(130deg)}}
+.innerBall{position:absolute;width:7px;height:7px;border-radius:50%;background:white;left:45px;top:4px;z-index:6;transform-origin:0 41px;animation:orbPoint 2.8s linear infinite;box-shadow:0 0 5px white,0 0 12px #00eaff}.ib2{animation-duration:3.8s;animation-direction:reverse;box-shadow:0 0 5px white,0 0 12px #ff2ac8}
+@media(max-width:700px){.loginCard{width:94vw!important;padding:12px!important}.v12Lion{width:72px;height:72px;flex-basis:72px}.v12Lion img{width:60px;height:60px;inset:6px}.innerRunner{width:66px;height:38px;top:17px}.innerBall{left:36px;transform-origin:0 33px}}
+@media(prefers-reduced-motion:reduce){.frameRunner:before,.lionOrbit i,.innerRunner,.innerBall{animation:none}}

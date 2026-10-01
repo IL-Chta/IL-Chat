@@ -1,8 +1,8 @@
-IL TALK V11 NEON
-- Imagem oficial mantida.
-- Login compacto.
-- Duas trilhas neon coloridas percorrem continuamente a moldura como no efeito do IL Bate Papo.
-- Três esferas luminosas orbitam a região do leão no login.
-- Dentro do curso: mesmo leão dourado adulto, com dois anéis neon e duas esferas em movimento.
-- Sem leão infantil.
-- Próximo passo: Mioko IA / backend.
+IL TALK V12 — NEON IL BATE PAPO
+Ajustado a partir dos vídeos enviados em 01/10/2026:
+- segmento de neon ("minhoca") percorre o perímetro da moldura, em vez de girar a moldura inteira;
+- segundo segmento muda a combinação de cores;
+- leão do login recebe três órbitas neon inclinadas e esferas luminosas;
+- interior usa o mesmo leão adulto/dourado e efeitos neon/esferas;
+- imagens têm nomes simples: assets/logo-il-talk.jpg e assets/leao-il-talk.jpg;
+- sem leão infantil.
