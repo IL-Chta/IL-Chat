@@ -1,8 +1,8 @@
-IL TALK V14
-- Usa a imagem aprovada enviada pelo usuário, embutida no HTML.
-- Neon da moldura percorre o perímetro como segmento ("minhoca"), sem girar o quadro.
-- Na zona do leão: quatro faixas neon com ângulos/sentidos diferentes, inspiradas no vídeo do IL Bate Papo.
-- Três esferas luminosas com trajetórias independentes.
-- Livros recebem pulso de brilho suave.
-- Dentro do curso: mesmo leão dourado adulto, recorte corrigido e embutido; neons laterais/diagonais e esferas.
-- Próxima etapa: Mioko IA.
+IL TALK V15 — ARCOS BATE PAPO
+- Removidos os bastões retos da V14.
+- Moldura: segmento neon colorido percorre continuamente o contorno.
+- Leão do login: três arcos elípticos curvos, em inclinações diferentes, com brilho e movimento por dash.
+- Três esferas percorrem caminhos curvos ao redor do leão.
+- Livros pulsam suavemente.
+- Interior: leão dourado adulto maior, vivo, com dois arcos curvos e duas esferas.
+- Imagens críticas continuam embutidas no HTML.
