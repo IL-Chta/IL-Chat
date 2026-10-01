@@ -1,21 +1,24 @@
-IL TALK CURSOS DE IDIOMAS — V4 NEON
+IL TALK CURSOS DE IDIOMAS — V5
 
-VISUAL
-- Leão com anéis LED/neon animados no login.
-- Leão brilhante também dentro do curso.
-- Botões com neon discreto e mudança de cor ao passar o mouse.
-- Identidade IL TALK CURSOS DE IDIOMAS.
+V5 mantém o leão neon da V4 por enquanto. Ele pode servir bem à futura área infantil; depois podemos criar uma identidade mais sóbria para adolescentes/adultos sem perder a marca.
 
-FUNCIONAL
-- Sala da Mioko, nivelamento adaptativo e conversa multilíngue.
-- Japonês permanece o foco inicial.
-- Texto é o caminho principal; microfone é opcional.
-- Voz pode ser desligada.
-- Foto e arquivo abrem o seletor; upload real exige storage/backend.
-- Vídeo/chamada da Mioko estão identificados como preparação: não fingem conexão real.
+AVANÇOS:
+- histórico da conversa salvo localmente para o protótipo;
+- idioma escolhido lembrado no navegador;
+- modos Aluno / Professor / Administração;
+- nivelamento por conversa;
+- japonês como foco inicial, com arquitetura multilíngue;
+- texto como caminho principal; microfone opcional;
+- voz pode ser desligada;
+- foto e arquivo selecionáveis;
+- botões neon com mudança de cor no hover.
 
-IMPORTANTE
-- Login desta V4 ainda é demonstrativo. Autenticação real será ligada ao Supabase.
-- A IA real exige publicar supabase/functions/il-ai/index.ts, configurar OPENAI_API_KEY nos Secrets e informar a URL em config.js.
-- Este pacote é independente. NÃO substitua a raiz do IL Chats ou IL Bate Papo com ele.
-- Nenhum motor de câmera/chamada existente foi incluído ou alterado.
+AINDA PRECISA DE BACKEND PARA SER REAL:
+- autenticação Supabase;
+- IA Mioko online;
+- progresso persistente no banco;
+- upload privado;
+- avatar/videochamada de IA.
+
+SEGURANÇA:
+Este ZIP é independente e não altera IL Chats nem IL Bate Papo. Não substitua a raiz desses projetos com este pacote.
