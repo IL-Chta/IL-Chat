@@ -1,12 +1,15 @@
-IL TALK V21 — AJUSTE PELAS DUAS FOTOS
+IL TALK V22 — SOMENTE SEM MOLDURA AZUL
 
-Alterado SOMENTE o que foi apontado:
-1. removida a moldura externa indicada pela seta na foto do IL Talk;
-2. removido qualquer trilho de neon parado;
-3. mantida somente a "minhoca" LED colorida percorrendo o perímetro;
-4. reduzido para um único arco CSS adicional em movimento sobre o leão;
-5. mantida uma única esfera luminosa em movimento;
-6. removido o globo/esfera artificial extra do CSS;
-7. no leão interno, removidas todas as argolas CSS adicionais.
+Nesta versão foi feita uma única correção:
+- ocultada a moldura azul fixa indicada na imagem enviada.
 
-Nenhuma outra parte da interface foi redesenhada.
+Não foram alterados:
+- leão;
+- quantidade/posição dos arcos;
+- esfera;
+- movimento;
+- login;
+- botões;
+- conteúdo interno.
+
+A minhoca LED continua circulando e fica acima da máscara.
