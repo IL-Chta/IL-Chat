@@ -1,0 +1,11 @@
+IL TALK V34 — MIOKO JAPONÊS PURO
+Último ZIP da madrugada.
+Base: V33.
+- Uma única Sala da Mioko.
+- Backend exige duas saídas separadas: japanese e portuguese.
+- Apenas japanese vai para legenda principal e voz/TTS.
+- Português aparece em caixa pedagógica separada e NÃO é falado pela voz japonesa.
+- Evita o "japaguês" e o português com sotaque japonês.
+- Permite mnemônicos engraçados na explicação, claramente identificados como brincadeira.
+- Não altera os leões nem WebRTC/câmera do IL Chats.
+- Para funcionar de verdade: publicar il-ai e il-tts no Supabase e configurar OPENAI_API_KEY.

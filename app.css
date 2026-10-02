@@ -796,3 +796,7 @@
 .miokoV33Composer textarea{resize:none;border:1px solid #31516c;border-radius:10px;background:#071522;color:#fff;padding:9px}.miokoV33Composer button{border:0;border-radius:10px;padding:0 16px;cursor:pointer;font-weight:700}
 .mv30Stage{position:relative}.mv30Caption{bottom:165px}
 @media(max-width:650px){.miokoV33Composer{bottom:110px}.mv30Caption{bottom:190px}}
+
+/* V34 — fala japonesa separada da explicação em português */
+.miokoV34Explain{position:absolute;z-index:8;left:50%;bottom:250px;transform:translateX(-50%);width:min(760px,90%);padding:9px 12px;border-radius:12px;background:#07182be8;border:1px solid #ffffff22;color:#d9eaf4;font-size:13px}
+.miokoV34Explain[hidden]{display:none!important}.miokoV34Explain b{display:block;margin-bottom:3px}.miokoV34Explain span{white-space:pre-wrap}
