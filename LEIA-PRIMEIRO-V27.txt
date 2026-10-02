@@ -1,0 +1,8 @@
+IL TALK CURSOS — V27
+Base: V26 aprovada no login.
+
+ÚNICA alteração:
+- o leão pequeno de dentro/cabeçalho agora usa exatamente a mesma arte aprovada do leão do login;
+- enquadramento mostra o leão à esquerda;
+- mantidos arcos/esferas em movimento no leão pequeno;
+- login, curso, Mioko, botões, autenticação e demais funções não foram alterados.

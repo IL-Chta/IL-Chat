@@ -685,3 +685,63 @@
 @media(prefers-reduced-motion:reduce){
   .v26Worm,.v26Arc{animation:none}
 }
+
+
+/* V27 — leão interno: mesma cabeça/arte aprovada do login.
+   Nenhum outro componente do curso foi alterado. */
+.v15Lion{
+  position:relative !important;
+  overflow:hidden !important;
+  border-radius:50% !important;
+  background:#020915 !important;
+  box-shadow:0 0 10px #00eaff88,0 0 18px #004cff55 !important;
+}
+.v15Lion > img{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  /* A arte aprovada é 1740x771; este enquadramento pega somente o leão à esquerda. */
+  object-position:left center !important;
+  z-index:1 !important;
+  filter:none !important;
+  transform:none !important;
+}
+.v15Lion > svg{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  z-index:5 !important;
+  display:block !important;
+  pointer-events:none !important;
+}
+.v15Lion .ia{
+  fill:none !important;
+  stroke-linecap:round !important;
+  filter:drop-shadow(0 0 3px currentColor) !important;
+}
+.v15Lion .ia1{
+  stroke:#19dcff !important;
+  stroke-width:2.2 !important;
+  stroke-dasharray:75 265 !important;
+  animation:v27InsideArc1 3.8s linear infinite !important;
+}
+.v15Lion .ia2{
+  stroke:#ff35c8 !important;
+  stroke-width:1.7 !important;
+  stroke-dasharray:48 285 !important;
+  opacity:.70 !important;
+  animation:v27InsideArc2 5.1s linear infinite reverse !important;
+}
+.v15Lion .ib{
+  display:block !important;
+  fill:#fff !important;
+  filter:drop-shadow(0 0 4px #fff) drop-shadow(0 0 7px #19dcff) !important;
+}
+.v15Lion .ib.pink{
+  filter:drop-shadow(0 0 4px #fff) drop-shadow(0 0 7px #ff35c8) !important;
+}
+@keyframes v27InsideArc1{to{stroke-dashoffset:-340}}
+@keyframes v27InsideArc2{to{stroke-dashoffset:-333}}
