@@ -1,0 +1,20 @@
+IL TALK CURSOS — V28 MIOKO-SAN
+Base: V27 aprovada. Os dois leões permanecem intocados.
+
+NOVO NESTA VERSÃO
+- Mioko deixa de ser emoji e passa a ter primeiro avatar animado dentro do curso.
+- pisca, tem leve movimento de cabeça e boca animada durante a fala.
+- identificação explícita: Professora Virtual de Idiomas (IA).
+- conversa por texto continua funcionando pela função il-ai.
+- voz: nova função segura Supabase il-tts usando OpenAI gpt-4o-mini-tts / voz marin.
+- se TTS_ENDPOINT ainda não estiver configurado, a interface usa temporariamente a voz do próprio dispositivo.
+- microfone do aluno continua OPCIONAL.
+
+PARA LIGAR A VOZ OPENAI
+1. Deploy da pasta supabase/functions/il-tts como função il-tts.
+2. OPENAI_API_KEY fica SOMENTE nos secrets do Supabase.
+3. Coloque a URL HTTPS da função em TTS_ENDPOINT no config.js.
+4. O endpoint il-ai continua separado em AI_ENDPOINT.
+
+PRÓXIMA ETAPA APÓS TESTE
+- substituir o avatar CSS por avatar humano realista aprovado e fazer lip-sync mais preciso.

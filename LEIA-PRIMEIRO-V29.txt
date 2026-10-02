@@ -1,0 +1,7 @@
+IL TALK V29 — MIOKO SENSEI
+Base: V28.
+Não altera os leões.
+Adiciona sala isolada da Mioko com chat, histórico curto, correção/ensino de japonês e botão de voz.
+Backend il-ai atualizado para Responses API e chave somente no Supabase.
+A voz usa a função il-tts já preparada na V28.
+Para funcionar online, publicar as Edge Functions il-ai e il-tts e configurar OPENAI_API_KEY no Supabase.

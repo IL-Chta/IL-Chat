@@ -1,1 +1,17 @@
-const cors={"Access-Control-Allow-Origin":"*","Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type","Access-Control-Allow-Methods":"POST, OPTIONS"};Deno.serve(async(req)=>{if(req.method==="OPTIONS")return new Response("ok",{headers:cors});try{const b=await req.json(),key=Deno.env.get("OPENAI_API_KEY");if(!key)throw Error("OPENAI_API_KEY não configurada");const lang=String(b.language||"Japonês"),msg=String(b.message||"").slice(0,6000),hist=Array.isArray(b.history)?b.history.slice(-12):[];const system=`Você é Mioko, Professora Virtual multilíngue do IL Talk Cursos de Idiomas. Você é uma IA. Converse naturalmente sobre assuntos variados apropriados, usando a conversa para ensinar ${lang}. Faça nivelamento adaptativo e não presuma nível iniciante. Se o aluno não entender, explique brevemente em português e depois repita em ${lang}. Atenda pedidos para falar mais devagar, repetir, conversar só no idioma ou aumentar a dificuldade. Corrija com clareza sem quebrar o fluxo. Não afirme ter visto vídeo, ouvido áudio ou aberto arquivo se recebeu apenas texto.`;const input=[{role:"system",content:system},...hist.map((x:any)=>({role:x.role==="assistant"?"assistant":"user",content:String(x.content||"").slice(0,3000)})),{role:"user",content:msg}];const r=await fetch("https://api.openai.com/v1/responses",{method:"POST",headers:{Authorization:`Bearer ${key}`,"Content-Type":"application/json"},body:JSON.stringify({model:Deno.env.get("OPENAI_MODEL")||"gpt-5.6-luna",input})});const d=await r.json();if(!r.ok)throw Error(d?.error?.message||`HTTP ${r.status}`);const answer=d.output_text||(d.output||[]).flatMap((x:any)=>x.content||[]).find((x:any)=>x.type==="output_text")?.text;if(!answer)throw Error("Resposta sem texto");return Response.json({answer},{headers:cors})}catch(e){return Response.json({error:String(e?.message||e)},{status:500,headers:cors})}});
+
+import "jsr:@supabase/functions-js/edge-runtime.d.ts";
+const cors={"Access-Control-Allow-Origin":"https://il-chta.github.io","Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"};
+Deno.serve(async(req)=>{
+ if(req.method==="OPTIONS")return new Response("ok",{headers:cors});
+ try{
+  const key=Deno.env.get("OPENAI_API_KEY"); if(!key)throw new Error("OPENAI_API_KEY ausente");
+  const b=await req.json(); const msg=String(b.message||"").trim(); if(!msg)throw new Error("Mensagem vazia");
+  const instructions=`Você é Mioko, Professora Virtual de Idiomas (IA) do IL Talk. Sua prioridade atual é japonês. Ensine de forma natural, paciente e rigorosa. Adapte-se ao nível do aluno. Corrija erros sem humilhar. Quando útil, apresente japonês, leitura/romanização e explicação curta em português brasileiro. Se o aluno pedir japonês apenas, não traduza. Nunca diga ser humana.`;
+  const input=[...(Array.isArray(b.history)?b.history.slice(-10):[]),{role:"user",content:msg}];
+  const r=await fetch("https://api.openai.com/v1/responses",{method:"POST",headers:{"Authorization":`Bearer ${key}`,"Content-Type":"application/json"},body:JSON.stringify({model:"gpt-6-luna",instructions,input})});
+  const j=await r.json(); if(!r.ok)throw new Error(j?.error?.message||"OpenAI error");
+  let reply=j.output_text;
+  if(!reply) reply=(j.output||[]).flatMap((x:any)=>x.content||[]).filter((x:any)=>x.type==="output_text").map((x:any)=>x.text).join("\n");
+  return new Response(JSON.stringify({reply}),{headers:{...cors,"Content-Type":"application/json"}});
+ }catch(e){return new Response(JSON.stringify({error:String(e?.message||e)}),{status:500,headers:{...cors,"Content-Type":"application/json"}})}
+});
