@@ -1,0 +1,10 @@
+IL TALK V30 — MIOKO VIDEOAULA
+Base: V29.
+- Não altera os leões.
+- Mioko ganha tela de videoaula virtual em tela grande.
+- Avatar pisca, movimenta levemente a cabeça e move a boca enquanto o áudio toca.
+- Legenda sempre visível.
+- Microfone e câmera do aluno NÃO são necessários.
+- Prompt corrigido: japonês por padrão; português somente em bloco separado quando necessário.
+- A fala real depende da Edge Function il-tts publicada no Supabase.
+- Este avatar é a primeira versão técnica; a aparência realista final pode ser substituída depois sem mexer no cérebro/voz.

@@ -1,0 +1,8 @@
+IL TALK V31 — MIOKO VIDEOCHAMADA
+Base: V30.
+NÃO altera os leões nem o WebRTC/câmera do IL Chats.
+Adiciona uma chamada virtual isolada: Mioko pode aparecer chamando; o aluno atende/recusa, vê avatar, legenda e ouve a fala.
+A câmera e o microfone do aluno permanecem opcionais.
+A resposta inteligente continua via il-ai e a voz via il-tts no Supabase.
+Para a chamada falar de verdade, publique as Edge Functions e configure OPENAI_API_KEY no Supabase.
+Esta V31 simula a interface/experiência de videochamada com professora virtual; não é uma chamada WebRTC entre duas pessoas.
