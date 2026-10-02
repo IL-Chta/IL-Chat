@@ -1,0 +1,13 @@
+IL TALK V35 — DIAGNÓSTICO DA MIOKO
+Base: V34. Não altera os leões, WebRTC ou visual principal.
+
+Esta versão NÃO tenta esconder o problema com outro prompt.
+Ela adiciona o botão "Diagnóstico Mioko".
+Ao clicar, a página chama a função il-ai que estiver realmente publicada e mostra:
+- se o Supabase foi inicializado;
+- erro retornado pela Edge Function;
+- resposta bruta;
+- se o backend devolveu o contrato novo japanese/portuguese.
+
+Se aparecer "backend não retornou o contrato V34", a página está alcançando uma função antiga/diferente.
+Assim saberemos exatamente por que a Mioko continua falando português.
