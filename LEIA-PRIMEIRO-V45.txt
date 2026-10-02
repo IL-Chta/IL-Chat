@@ -1,0 +1,24 @@
+IL TALK V45 — MIOKO FUNCIONA DE VERDADE
+
+BASE VISUAL: V38.
+Motivo: não carregar as regressões visuais/logos/manchas introduzidas nas V41–V44.
+
+O que mudou:
+- NÃO redesenha os logos e NÃO altera o visual aprovado da base V38.
+- adiciona um controlador V45 isolado que captura o envio da conversa antes dos scripts antigos;
+- conversa aberta com histórico recente;
+- resposta falada em japonês; apoio português separado;
+- tenta il-tts existente; se não houver áudio do servidor, usa speechSynthesis ja-JP do navegador;
+- erro de conexão aparece na conversa em vez de uma frase falsa/enlatada.
+
+BACKEND:
+- usa Responses API com gpt-6-luna;
+- a função il-ai precisa ser publicada no Supabase real do IL Talk;
+- OPENAI_API_KEY fica somente no Supabase, nunca no GitHub/browser.
+
+TESTE MÍNIMO:
+1) "Quanto é 1 + 1?"
+2) conte uma história curta;
+3) mude para futebol;
+4) mude para comida;
+5) veja se ela mantém contexto e fala a resposta.
