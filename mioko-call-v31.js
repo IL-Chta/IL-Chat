@@ -4,7 +4,7 @@ async function speak(t){last=t||last;cap.textContent=last;st.textContent="Mioko-
 window.miokoIncomingCall=()=>{box.hidden=false;incoming.hidden=false;st.textContent="Mioko-sensei está chamando…"};
 $("#mc31Answer")?.addEventListener("click",()=>{incoming.hidden=true;speak(last)});
 $("#mc31Decline")?.addEventListener("click",()=>box.hidden=true);$("#mc31End")?.addEventListener("click",()=>box.hidden=true);
-$("#mc31Repeat")?.addEventListener("click",()=>speak(last));$("#mc31Type")?.addEventListener("click",()=>{box.hidden=true;const p=$("#miokoV29Panel");if(p)p.hidden=false});
+$("#mc31Repeat")?.addEventListener("click",()=>speak(last));$("#mc31Type")?.addEventListener("click",()=>{box.hidden=true;window.miokoVideoOpen?.()});
 document.addEventListener("click",e=>{const t=e.target.closest("button,a,[role=button]");if(!t)return;const x=(t.textContent||"").toLowerCase();if((x.includes("mioko")&&x.includes("chamada"))||x.includes("ligar para mioko"))window.miokoIncomingCall()});
 const chat=$("#miokoV29Chat");if(chat)new MutationObserver(()=>{const a=chat.querySelectorAll(".miokoV29Msg.ai"),m=a[a.length-1];if(m){last=m.textContent.replace(/^Mioko:\s*/,"");cap.textContent=last}}).observe(chat,{childList:true});
 })();

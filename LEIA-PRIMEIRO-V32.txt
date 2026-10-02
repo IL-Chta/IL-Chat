@@ -1,0 +1,13 @@
+IL TALK V32 — UMA ÚNICA MIOKO
+Base: V31.
+
+ALTERAÇÃO CIRÚRGICA:
+- Removida a telinha pequena antiga da Mioko.
+- Removido mioko-v29.js para ela não reaparecer.
+- CSS de segurança mantém o painel antigo oculto.
+- Mantidas a Sala/Videoaula e a experiência de chamada.
+- Não alterados os leões.
+- Não alterado o WebRTC/câmera do IL Chats.
+- Não alterado o restante visual do curso.
+
+Próxima etapa: fazer a Sala da Professora ser o único ponto de conversa e ligar Enviar -> il-ai -> resposta -> legenda -> il-tts -> animação da boca.

@@ -1,0 +1,10 @@
+IL TALK V33 — MIOKO RESPONDE E FALA
+Base: V32.
+- Mantém uma única Sala da Professora Mioko.
+- Campo Enviar agora fica dentro da própria sala.
+- Fluxo: aluno digita -> il-ai -> resposta -> legenda -> il-tts -> boca animada.
+- Erros aparecem na legenda; não fica mais silencioso sem explicação.
+- Japonês é o idioma padrão da professora; português é apoio pedagógico.
+- Microfone do aluno continua opcional.
+- Não altera os leões nem WebRTC/câmera do IL Chats.
+IMPORTANTE: para IA e voz reais, il-ai e il-tts precisam estar publicados no Supabase com OPENAI_API_KEY configurada.

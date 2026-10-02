@@ -3,7 +3,7 @@
 let last="こんばんは。みおこ先生です。日本語を一緒に勉強しましょう。";
 window.miokoVideoOpen=()=>{video.hidden=false};
 $("#mv30Close")?.addEventListener("click",()=>video.hidden=true);
-$("#mv30Text")?.addEventListener("click",()=>{video.hidden=true;$("#miokoV29Panel").hidden=false});
+$("#mv30Text")?.addEventListener("click",()=>{video.hidden=true;window.miokoVideoOpen?.()});
 document.addEventListener("click",e=>{const t=e.target.closest("button,a,[role=button]");if(!t)return;const s=(t.textContent||"").toLowerCase();if(s.includes("video")&&s.includes("mioko"))window.miokoVideoOpen()});
 async function say(text){last=text||last;cap.textContent=last;
  try{
