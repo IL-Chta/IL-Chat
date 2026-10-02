@@ -1,0 +1,12 @@
+IL TALK CURSOS — V26
+Base: V23 (não V25).
+Mudanças desta versão:
+- preservada a estrutura funcional do curso da V23;
+- imagem principal substituída pela arte aprovada do IL Talk;
+- imagem incorporada no próprio HTML para não quebrar caminho;
+- removidas somente as camadas antigas de moldura/arame do hero;
+- adicionada uma única camada SVG/CSS:
+  • minhoca curta de 3 cores no perímetro, sem trilho fixo;
+  • dois arcos abertos e discretos no leão;
+  • duas esferas em movimento.
+- nenhuma alteração no IL Chats, IL Bate Papo ou IL Chats Mail.

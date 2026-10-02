@@ -1,8 +1,9 @@
-IL TALK V25 — BASE LIMPA
-- reconstruído sem continuar a cadeia V20–V24;
-- arte final aprovada incorporada diretamente no HTML para não quebrar;
-- nenhuma moldura fixa;
-- minhoca de 3 cores em SVG/CSS;
-- apenas dois arcos leves e duas esferas móveis;
-- nenhuma alteração na foto;
-- objetivo: congelar o visual e partir para Mioko IA.
+IL TALK V23
+Correção feita depois de assistir ao vídeo 23:04:
+- a moldura azul estava gravada na própria imagem;
+- a imagem foi levemente ampliada/recortada para a linha azul sair da área visível;
+- não foi criada outra moldura;
+- a minhoca LED continua;
+- a esfera móvel continua;
+- removidos os arcos CSS adicionais do leão;
+- ficam apenas os arcos que já pertencem à arte original.
