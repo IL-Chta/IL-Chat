@@ -1,56 +1,6 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IL Talk Cursos de Idiomas — V24</title><link rel="stylesheet" href="app.css"></head><body>
-<section id="login" class="login"><div class="card loginCard"><div class="v15Hero ilbp-mail-stage">
-  <img class="talkHeroPhoto" src="assets/il-talk-logo.png" alt="IL Talk Cursos de Idiomas">
-  <svg class="talkFx talkFxHero" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
-    <defs>
-      <linearGradient id="worm3" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#19dcff"/>
-        <stop offset=".52" stop-color="#ff35c8"/>
-        <stop offset="1" stop-color="#ffd84a"/>
-      </linearGradient>
-      <linearGradient id="orbit3" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#19dcff"/>
-        <stop offset=".55" stop-color="#8b5cff"/>
-        <stop offset="1" stop-color="#ff35c8"/>
-      </linearGradient>
-      <filter id="talkGlow" x="-80%" y="-80%" width="260%" height="260%">
-        <feGaussianBlur stdDeviation="5" result="b"/>
-        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
-      <path id="heroOrbitA" d="M42 360 C105 82 550 80 650 340 C716 515 544 713 302 694 C98 677 8 523 42 360Z"/>
-      <path id="heroOrbitB" d="M75 515 C202 724 604 680 676 420 C721 256 567 128 342 137 C142 145 37 292 75 515Z"/>
-    </defs>
-    <!-- não existe trilho/moldura: somente a minhoquinha de 3 cores -->
-    <rect class="talkWorm" x="7" y="7" width="1586" height="886" rx="38" pathLength="2000"/>
-    <!-- poucos arcos, somente sobre a região do leão -->
-    <path class="talkArc arcA" d="M42 360 C105 82 550 80 650 340"/>
-    <path class="talkArc arcB" d="M75 515 C202 724 604 680 676 420"/>
-    <!-- esferas realmente orbitando -->
-    <circle class="talkBall cyan" r="8"><animateMotion dur="4.8s" repeatCount="indefinite"><mpath href="#heroOrbitA"/></animateMotion></circle>
-    <circle class="talkBall pink" r="6"><animateMotion dur="6.2s" repeatCount="indefinite"><mpath href="#heroOrbitB"/></animateMotion></circle>
-  </svg>
-</div>
-</div>
-<p>Aprenda conversando com a Professora Virtual Mioko.</p><input id="email" placeholder="E-mail"><input id="pass" type="password" placeholder="Senha"><button id="enter" class="nb">ENTRAR</button><small>Ambiente V5 de desenvolvimento</small></div></section>
-<div id="app" class="hide"><header><div class="brand"><div class="v15Lion">
-  <img src="assets/il-talk-leao.png" alt="Leão dourado IL Talk">
-  <svg class="talkFx talkFxInside" viewBox="0 0 120 120" aria-hidden="true">
-    <defs>
-      <linearGradient id="inside3" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#19dcff"/>
-        <stop offset=".55" stop-color="#ff35c8"/>
-        <stop offset="1" stop-color="#ffd84a"/>
-      </linearGradient>
-      <filter id="insideGlow" x="-80%" y="-80%" width="260%" height="260%">
-        <feGaussianBlur stdDeviation="2.2" result="b"/>
-        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
-      <path id="insideOrbit" d="M7 61 C15 13 94 4 113 54 C123 88 88 116 48 111 C14 107 2 84 7 61Z"/>
-    </defs>
-    <path class="insideArc" d="M7 61 C15 13 94 4 113 54"/>
-    <circle class="insideBall" r="3.2"><animateMotion dur="4.2s" repeatCount="indefinite"><mpath href="#insideOrbit"/></animateMotion></circle>
-  </svg>
-</div><div><b>IL TALK</b><small>CURSOS DE IDIOMAS</small></div></div><nav><button class="nb active" data-mode="Aluno">🎓 Aluno</button><button class="nb" data-mode="Professor">👨‍🏫 Professor</button><button class="nb" data-mode="Administração">🛡️ Administração</button><button id="exitCourse" class="nb exitBtn">🚪 Sair</button></nav></header><main>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IL Talk Cursos de Idiomas — V5</title><link rel="stylesheet" href="app.css"></head><body>
+<section id="login" class="login"><div class="card loginCard"><div class="lionWrap"><i></i><i></i><div class="lion">🦁</div></div><h1>IL TALK</h1><h2>CURSOS DE IDIOMAS</h2><p>Aprenda conversando com a Professora Virtual Mioko.</p><input id="email" placeholder="E-mail"><input id="pass" type="password" placeholder="Senha"><button id="enter" class="nb">ENTRAR</button><small>Ambiente V5 de desenvolvimento</small></div></section>
+<div id="app" class="hide"><header><div class="brand"><span>🦁</span><div><b>IL TALK</b><small>CURSOS DE IDIOMAS</small></div></div><nav><button class="nb active" data-mode="Aluno">🎓 Aluno</button><button class="nb" data-mode="Professor">👨‍🏫 Professor</button><button class="nb" data-mode="Administração">🛡️ Administração</button></nav></header><main>
 <section class="panel hero"><div><small>NIVELAMENTO POR CONVERSAÇÃO</small><h1>Fale sobre qualquer assunto.<br>A Mioko adapta a aula a você.</h1><p>Comece do seu nível real. Se não compreender, peça português, repetição ou uma fala mais lenta.</p></div><div class="mioko"><div>👩🏻‍🏫</div><h2>Mioko IA</h2><span>● Professora Virtual</span></div></section>
 <section class="panel"><h2>Idioma</h2><div class="langs"><button class="nb sel" data-lang="Japonês">🇯🇵 Japonês</button><button class="nb" data-lang="Inglês">🇬🇧 Inglês</button><button class="nb" data-lang="Espanhol">🇪🇸 Espanhol</button><button class="nb" data-lang="Francês">🇫🇷 Francês</button><button class="nb" data-lang="Coreano">🇰🇷 Coreano</button><button class="nb" data-lang="Outro">🌐 Outro</button></div></section>
 <section class="panel"><div class="roomHead"><div><h2>📹 Sala da Professora Mioko</h2><p id="status">Japonês • avaliação adaptativa</p></div><button id="begin" class="nb">✨ COMEÇAR AULA</button></div>
@@ -60,4 +10,4 @@
 <div class="compose"><textarea id="text" placeholder="Escreva para a Mioko. Você não precisa usar microfone."></textarea><button id="send" class="nb">💬 ENVIAR</button></div>
 <div class="quick"><button class="nb" data-q="Fale mais devagar e depois repita.">🐢 Mais devagar</button><button class="nb" data-q="Explique em português e depois repita no idioma estudado.">🇧🇷 Português</button><button class="nb" data-q="Repita novamente.">🔁 Repetir</button><button class="nb" data-q="Aumente a dificuldade.">🚀 Avançar</button><button class="nb" data-q="Converse somente no idioma escolhido.">💬 Só no idioma</button></div></section>
 <section class="panel"><h2>Progresso do aluno</h2><div class="progress"><div><b>Nível</b><span id="level">Em avaliação</span></div><div><b>Conversação</b><span>Em construção</span></div><div><b>Última aula</b><span>Salva neste dispositivo</span></div><div><b>Retomar</b><span>Do ponto anterior</span></div></div></section>
-</main><footer>🦁 IL Talk Cursos de Idiomas • V10</footer></div><script src="config.js"></script><script src="app.js"></script></body></html>
+</main><footer>🦁 IL Talk Cursos de Idiomas • V5</footer></div><script src="config.js"></script><script src="app.js"></script></body></html>

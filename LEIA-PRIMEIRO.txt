@@ -1,9 +1,8 @@
-IL TALK V24 — FOTO LIMPA + EFEITOS CSS/SVG
-
-- usa assets/il-talk-logo.png sem moldura gravada;
-- usa assets/il-talk-leao.png no leão interno;
-- a minhoquinha de 3 cores é SVG/CSS e percorre o perímetro sem trilho estático;
-- poucos arcos animados ficam somente na região do leão;
-- duas esferas luminosas orbitam o leão principal;
-- no leão interno há apenas um arco discreto e uma esfera em movimento;
-- nenhum efeito novo foi desenhado dentro das fotos.
+IL TALK V25 — BASE LIMPA
+- reconstruído sem continuar a cadeia V20–V24;
+- arte final aprovada incorporada diretamente no HTML para não quebrar;
+- nenhuma moldura fixa;
+- minhoca de 3 cores em SVG/CSS;
+- apenas dois arcos leves e duas esferas móveis;
+- nenhuma alteração na foto;
+- objetivo: congelar o visual e partir para Mioko IA.
