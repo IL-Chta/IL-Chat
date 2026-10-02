@@ -11,7 +11,9 @@ async function ask(){
   history.push({role:"user",content:msg});
   const {data,error}=await window.supabaseClient.functions.invoke("il-ai",{body:{message:msg,history:history.slice(-10),language:"ja",mode:"language_teacher_v34"}});
   if(error)throw error;
-  const ja=data?.japanese||data?.ja||data?.speech_ja||data?.reply;
+  let ja=data?.japanese||data?.ja||data?.speech_ja||"";
+  // V36: não usamos reply genérico como fala, pois pode conter idiomas misturados.
+  if(!ja && data?.reply) throw Error("Backend antigo detectado: resposta sem campo japanese. Publique a il-ai da V36.");
   const explanation=data?.portuguese||data?.pt||data?.explanation_pt||"";
   if(!ja)throw Error("Resposta japonesa vazia");
   history.push({role:"assistant",content:ja+(explanation?`\n[PT] ${explanation}`:"")});

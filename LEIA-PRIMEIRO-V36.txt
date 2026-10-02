@@ -1,0 +1,14 @@
+IL TALK V36 — MIOKO SEM MAZERU 😂
+Base: V35.
+
+Mudança principal:
+- O frontend NÃO aceita mais 'reply' genérico como fala japonesa.
+- Se o backend antigo responder sem o campo 'japanese', aparece erro claro pedindo a publicação da il-ai V36.
+- A Edge Function exige saída estruturada japanese + portuguese.
+- Só japanese pode ir ao TTS.
+- portuguese é apenas texto pedagógico.
+- Há uma trava extra contra palavras portuguesas comuns dentro de japanese.
+- Diagnóstico Mioko da V35 foi preservado.
+- Leões e WebRTC do IL Chats não foram alterados.
+
+Para o comportamento mudar no site publicado, é indispensável publicar supabase/functions/il-ai/index.ts desta V36 no projeto Supabase usado pelo site. Trocar apenas os arquivos do GitHub não substitui uma Edge Function já publicada.
