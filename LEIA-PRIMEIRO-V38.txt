@@ -1,0 +1,19 @@
+IL TALK CURSOS — V38 — MIOKO SABE QUEM É
+
+Base: V37 Conversação Livre.
+
+Mudanças cirúrgicas desta versão:
+- Identidade permanente: nome = Mioko.
+- Função permanente: Professora Virtual de Idiomas (IA) do IL Talk.
+- Nome e profissão são conceitos separados.
+- Ela se apresenta apenas no primeiro contato real ou quando perguntarem explicitamente quem ela é.
+- Não repete nome/cargo a cada mensagem ou aula.
+- Se perguntarem o nome: Mioko.
+- Se perguntarem o que faz: professora virtual de idiomas do IL Talk.
+- Mantida a conversação livre da V37 e o histórico contextual.
+- Mantida a separação japonês falado / português apenas de apoio.
+- Mantida a correção automática contra mazeru.
+- Mantida a boca orientada pelo áudio.
+- Leão e WebRTC NÃO foram alterados.
+
+IMPORTANTE: para esta identidade chegar à IA publicada, é necessário publicar a Edge Function supabase/functions/il-ai/index.ts desta V38 no projeto Supabase realmente usado pelo IL Talk.

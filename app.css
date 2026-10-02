@@ -803,3 +803,5 @@
 
 /* V35 diagnóstico: mostra qual backend a página realmente alcança */
 .miokoV35Diag{position:fixed;left:12px;bottom:12px;z-index:16000}.miokoV35Diag button{border:1px solid #1edcff66;border-radius:10px;background:#07182a;color:#fff;padding:8px 10px;cursor:pointer}.miokoV35Diag pre{width:min(620px,92vw);max-height:45vh;overflow:auto;white-space:pre-wrap;background:#020812ee;color:#bcecff;border:1px solid #1edcff55;border-radius:10px;padding:10px;font-size:12px}
+/* V37: boca mais responsiva durante áudio real. Mantém fallback da animação existente. */
+#mv30Avatar.speaking .mouth, #mv30Avatar.speaking [class*="mouth"]{animation-duration:.16s!important;transform:scaleY(calc(.65 + var(--mioko-mouth, .35)))!important;transform-origin:center!important;transition:transform .055s linear!important}

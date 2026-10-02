@@ -1,0 +1,12 @@
+IL TALK V37 — MIOKO CONVERSAÇÃO LIVRE
+
+Base: V36 aprovada como melhor que a versão anterior.
+- Não mexe no leão.
+- Não mexe no WebRTC do IL Chats.
+- Mioko deixa de forçar roteiro de aula e passa a continuar o assunto do aluno.
+- Histórico aumentado para manter melhor o contexto da conversa.
+- Se houver mistura de idioma, o backend tenta CORRIGIR automaticamente em japonês em vez de simplesmente calar a professora.
+- Português fica como apoio textual separado.
+- Movimento da boca fica mais rápido e tenta reagir à intensidade do áudio via Web Audio API.
+
+IMPORTANTE: para a mudança de inteligência entrar no site, publique supabase/functions/il-ai/index.ts desta V37 no projeto Supabase usado pelo IL Talk. A troca do ZIP no GitHub, sozinha, não substitui uma Edge Function antiga já publicada.
