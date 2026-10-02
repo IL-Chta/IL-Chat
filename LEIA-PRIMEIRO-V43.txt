@@ -1,0 +1,19 @@
+IL TALK V43 — MIOKO CONVERSA DE VERDADE
+
+Correções principais:
+1. Removido o JPEG embutido que estava ficando vermelho/manchado.
+   O login agora usa diretamente assets/il-talk-logo.png, a arte limpa original do pacote.
+2. Somente Japonês fica anunciado como curso ativo nesta etapa.
+3. Removidos scripts antigos V30/V31/V33/V35/V42 que estavam concorrendo entre si.
+4. Um único cliente (app-v43.js) controla a conversa.
+5. O frontend aceita o contrato novo target/support_pt e também formatos antigos por compatibilidade.
+6. COMEÇAR AULA não dispara mais a frase enlatada em português "Vamos conversar em Japonês...".
+7. Mioko recebe modo de conversação aberta: responde ao assunto real do aluno e mantém contexto.
+
+CONEXÃO:
+- Se window.supabaseClient existir, usa il-ai e il-tts.
+- Se não existir, tenta AI_ENDPOINT de config.js.
+- Se nenhum estiver configurado, mostra erro claro; não finge que a IA respondeu.
+- Para usar a Edge Function V43, publique supabase/functions/il-ai/index.ts no Supabase real do IL Talk.
+
+Não foi alterado o WebRTC do IL Chats.
