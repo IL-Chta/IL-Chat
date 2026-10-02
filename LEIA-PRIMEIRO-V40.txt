@@ -1,0 +1,6 @@
+V40 — MIOKO MULTILÍNGUE
+Base V38. Não altera leão nem WebRTC.
+O idioma selecionado passa como target_language ao backend.
+Idiomas reconhecidos: japonês, inglês, espanhol, francês, coreano e português.
+A fala principal deve permanecer no idioma escolhido; português é apoio textual.
+A il-ai desta pasta precisa ser publicada no Supabase usado pelo IL Talk; trocar só o GitHub não atualiza a Edge Function.
