@@ -1,9 +1,21 @@
-IL TALK V23
-Correção feita depois de assistir ao vídeo 23:04:
-- a moldura azul estava gravada na própria imagem;
-- a imagem foi levemente ampliada/recortada para a linha azul sair da área visível;
-- não foi criada outra moldura;
-- a minhoca LED continua;
-- a esfera móvel continua;
-- removidos os arcos CSS adicionais do leão;
-- ficam apenas os arcos que já pertencem à arte original.
+V50 = TESTE DO CÉREBRO. NÃO É O SITE FINAL.
+
+Esta versão foi deliberadamente separada do visual do IL Talk:
+- sem logo;
+- sem avatar;
+- sem voz;
+- sem boca;
+- sem bandeiras;
+- sem respostas programadas.
+
+Objetivo: provar a cadeia USUÁRIO -> Edge Function il-ai -> OpenAI -> RESPOSTA REAL.
+
+1. Publique supabase/functions/il-ai/index.ts como Edge Function "il-ai" no projeto Supabase real.
+2. Configure OPENAI_API_KEY como secret do Supabase. Nunca coloque essa chave no GitHub ou index.html.
+3. Copie o endpoint HTTPS da função il-ai para o campo da página V50.
+4. Pergunte: Quanto é 1 + 1?
+5. Depois teste assuntos diferentes e continuidade.
+
+Se der erro, a própria tela mostra o erro real. Não há fallback de voz nem frase enlatada para esconder o problema.
+
+Depois que o cérebro estiver comprovado, ele será integrado ao visual bom do IL Talk; só então voltam voz, avatar, boca sincronizada e bandeiras.
