@@ -1,0 +1,24 @@
+IL TALK V44 — CÉREBRO + LOGOS LIMPOS
+
+Base: V43.
+
+V44:
+- preserva a conversa aberta da Mioko;
+- reforça que ela deve responder ao assunto real, sem discurso automático de aula;
+- mantém Japonês como único curso ativo;
+- devolve as bandeiras de Inglês, Espanhol, Francês e Coreano apenas visualmente, marcadas "em preparação";
+- usa as artes PNG do projeto e força filter:none / mix-blend-mode:normal nos logos para impedir alteração de cor/manchas por CSS;
+- mantém fallback de voz do navegador quando o il-tts não estiver disponível;
+- não altera o WebRTC do IL Chats.
+
+CONEXÃO DA IA:
+A conversa humana depende de uma IA realmente conectada.
+Publique supabase/functions/il-ai/index.ts no Supabase usado pelo IL Talk OU configure AI_ENDPOINT.
+Sem um desses caminhos, a V44 mostra erro de conexão em vez de fingir uma resposta automática.
+
+TESTE:
+1. "Quanto é 1 + 1?"
+2. "Hoje encontrei um amigo que não via há dez anos."
+3. "Você gosta de futebol?"
+4. mude para comida/viagem sem reiniciar a conversa.
+A Mioko deve acompanhar o assunto e o histórico.
