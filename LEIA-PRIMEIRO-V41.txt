@@ -1,0 +1,14 @@
+IL TALK V41 — CORREÇÃO DA MANCHA
+
+Base: V40.
+
+Diagnóstico confirmado:
+- a faixa/mancha horizontal NÃO era uma camada CSS;
+- ela estava gravada dentro do JPEG incorporado no HTML;
+- o mesmo JPEG era reutilizado no banner do login e no leão interno.
+
+Correção:
+- removida/compensada somente a faixa escura do JPEG;
+- corrigidos login e leão interno ao mesmo tempo;
+- preservados layout, Mioko, motor multilíngue, animações e WebRTC da V40;
+- nenhuma alteração estrutural no leão ou nas funções do curso.
