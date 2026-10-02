@@ -1,0 +1,17 @@
+IL TALK V42 — MIOKO CAMINHANDO
+
+Base: V41 (visual sem mancha).
+
+Decisão desta versão:
+- curso efetivamente liberado agora: JAPONÊS;
+- inglês, espanhol, francês, coreano e português deixam de ser anunciados como cursos ativos até serem realmente implementados/testados;
+- Mioko recebe modo CONVERSAÇÃO ABERTA;
+- responde ao assunto real do aluno, sem puxar tudo de volta para uma aula;
+- identidade fixa, sem repetir apresentação;
+- histórico recente ampliado;
+- japonês é fala principal; português é apoio textual separado;
+- leão e WebRTC não foram alterados.
+
+IMPORTANTE:
+Para a inteligência V42 existir no site, publique supabase/functions/il-ai/index.ts no Supabase REAL usado pelo IL Talk.
+O diagnóstico anterior mostrou "Supabase não inicializado"; enquanto essa conexão não estiver correta, trocar somente o ZIP no GitHub não conecta o cérebro novo da Mioko.
