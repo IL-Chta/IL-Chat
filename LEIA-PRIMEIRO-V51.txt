@@ -1,0 +1,40 @@
+IL TALK CURSOS V51 — MIOKO CÉREBRO
+======================================
+
+BASE
+- Mantém a interface/arte aprovada da V27.
+- Não mexe no IL Chats de chamadas, câmera, Mail ou Bate Papo.
+- Esta V51 corrige o contrato do chat para aceitar `answer` e mantém histórico.
+- Voz começa DESLIGADA de propósito. Primeiro vamos provar o cérebro.
+
+PARA LIGAR A IA
+1. No Supabase, crie/publique a Edge Function chamada: il-ai
+   Use o arquivo: supabase/functions/il-ai/index.ts
+
+2. Nos Secrets da Edge Function configure:
+   OPENAI_API_KEY = sua chave da OpenAI
+   Opcional: OPENAI_MODEL = gpt-5.6-luna
+
+3. Copie a URL da função il-ai.
+   Ela será parecida com:
+   https://SEU-PROJETO.supabase.co/functions/v1/il-ai
+
+4. Abra config.js e cole a URL entre as aspas de AI_ENDPOINT.
+   NÃO coloque a chave da OpenAI em config.js nem no GitHub.
+
+5. Publique os arquivos desta pasta no GitHub Pages.
+
+TESTE OBRIGATÓRIO
+A) 0 + 0 = ?
+   Esperado: 0.
+B) Qual é a capital do Japão?
+C) Agora me ensine como pedir um café em japonês.
+D) Pergunte algo que dependa da resposta anterior para conferir memória.
+
+Se aparecer "OPENAI_API_KEY não configurada", o frontend chegou ao Supabase e falta o Secret.
+Se aparecer erro de rede/CORS, conferir URL/deploy da função.
+Se aparecer "falta ligar o endereço", preencher config.js.
+
+IMPORTANTE
+A imagem/avatar nova da esposa NÃO foi colocada nesta V51 para não misturar cérebro + visual.
+Depois do teste de inteligência aprovado, fazemos voz estável, avatar e boca sincronizada.
