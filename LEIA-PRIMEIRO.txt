@@ -1,9 +1,30 @@
-IL TALK V23
-Correção feita depois de assistir ao vídeo 23:04:
-- a moldura azul estava gravada na própria imagem;
-- a imagem foi levemente ampliada/recortada para a linha azul sair da área visível;
-- não foi criada outra moldura;
-- a minhoca LED continua;
-- a esfera móvel continua;
-- removidos os arcos CSS adicionais do leão;
-- ficam apenas os arcos que já pertencem à arte original.
+IL CHATS — TECLADO MOBILE ESTILO WHATSAPP
+
+Este pacote corrige SOMENTE o responsivo do teclado.
+
+Arquivo real atualmente carregado pelo index.html:
+assets/index-CtQnR9aj.css
+
+COMO APLICAR
+1. Abra assets/index-CtQnR9aj.css.
+2. Preserve todo o conteúdo existente.
+3. Acrescente no FINAL o conteúdo de PATCH-TECLADO-WHATSAPP.css.
+4. Publique.
+5. Teste no celular abrindo uma conversa e tocando no campo de mensagem.
+
+RESULTADO ESPERADO
+- histórico de mensagens acima;
+- barra de escrita inteira acima do teclado;
+- navegação inferior escondida enquanto o teclado estiver aberto;
+- navegação inferior volta ao fechar o teclado;
+- sem alteração na câmera/chamada.
+
+NÃO MEXER
+- JavaScript da chamada;
+- WebRTC;
+- câmera;
+- microfone/áudio;
+- Supabase;
+- lista dos 19 contatos (será corrigida separadamente).
+
+Este ZIP é um PATCH cirúrgico, não um ZIP completo do projeto.
